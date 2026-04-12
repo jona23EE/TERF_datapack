@@ -7,6 +7,7 @@ function terf:entity/machines/stfr/calculations/tick
 scoreboard players set stabilizer_rotation_duration terf_states 3
 particle flash{color:[1,1,1,1]} ~ ~ ~ 0 0 0 0 1 force
 particle minecraft:large_smoke ~ ~ ~ 0 0 0 1 10 force
+scoreboard players add @s terf_data_V 250
 function terf:entity/machines/stfr/visuals/core/tick
 function terf:entity/machines/stfr/visuals/stabilizer/stabilizer_shield_beam_tick
 function terf:entity/machines/stfr/visuals/stabilizer/stabilizer_power_beam_tick
