@@ -1,7 +1,7 @@
 #process logistics
 execute if score @s terf_data_E matches 380.. run function terf:entity/machines/stfr/calculations/tick
 
-execute as @s run scoreboard players add @s terf_data_E 1
+execute run scoreboard players add @s terf_data_E 1
 
 scoreboard players operation temp terf_states = @s terf_data_T
 scoreboard players operation temp terf_states %= 16 terf_states

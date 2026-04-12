@@ -122,6 +122,6 @@ execute if score @s terf_data_E matches 860.. run function terf:entity/machines/
 
 #finish startup
 execute if score @s terf_data_E matches 1030 run tag @s add terf_low_core_spin
-execute if score @s terf_data_E matches 1030 as @s run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'stfr.starting.complete',level:0,text:'{"text":"Reactor Startup Sequence Complete. Stabilized Thermonuclear Fusion Reactor Core Online"}'}
+execute if score @s terf_data_E matches 1030 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'stfr.starting.complete',level:0,text:'{"text":"Reactor Startup Sequence Complete. Stabilized Thermonuclear Fusion Reactor Core Online"}'}
 execute if score @s terf_data_E matches 1030 run tag @s remove terf_core_starting_alarm
 execute if score @s terf_data_E matches 1030.. run scoreboard players set @s terf_data_A 3

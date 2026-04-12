@@ -5,7 +5,7 @@ data modify storage terf:temp displays.group_core[0].messages[3][1][1].color set
 
 function terf:autokick
 
-execute as @s run scoreboard players add @s terf_data_E 1
+execute run scoreboard players add @s terf_data_E 1
 
 scoreboard players operation temp terf_states = @s terf_data_T
 scoreboard players operation temp terf_states %= 16 terf_states
