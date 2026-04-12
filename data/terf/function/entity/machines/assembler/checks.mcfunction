@@ -16,7 +16,7 @@ execute unless function terf:entity/machines/assembler/structure_checks/is_platf
 ## Check for recipe
 data merge block ^-2 ^1 ^5 {front_text:{has_glowing_text:1b,messages:[{text:"    Assembler    ",color:"yellow",underlined:1b},"",{text:"Ready",color:green},""]},is_waxed:1b}
 
-execute positioned ^-2 ^ ^4 run function datapipes_lib:item_transfer/count_items/start 
+execute positioned ^-2 ^ ^4 run function datapipes_lib:item_transfer/count_items/start
 
 data modify storage terf:temp array set from storage terf:constants recipes.assembler
 function terf:entity/machines/assembler/checks_iterate

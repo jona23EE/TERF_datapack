@@ -69,14 +69,13 @@ execute if entity @s[tag=terf_ready] run data modify storage terf:temp displays.
 
 execute unless score @s terf_data_F >= @s terf_data_D run data modify storage terf:temp displays.status set value {color:yellow,has_glowing_text:1b,messages:["Warp Core Status",{text:"Not enough",color:"gold"},{text:"Power",color:"gold"},""]}
 
-scoreboard players operation calc terf_states = @s terf_data_C
-execute unless score @s terf_data_C matches 0 run data modify storage terf:temp displays.status set value {color:red,has_glowing_text:1b,messages:["Warp Core Status",{text:"Ship Contains",color:"red"},{text:"Immovable Blocks!",color:"red"},[{text:"x",color:"red"},{"score":{"objective":"terf_states","name":"calc"}}]]}
+scoreboard players operation blocked terf_states = @s terf_data_C
+execute unless score @s terf_data_C matches 0 run data modify storage terf:temp displays.status set value {color:red,has_glowing_text:1b,messages:["Warp Core Status",{text:"Ship Contains",color:"red"},{text:"Immovable Blocks!",color:"red"},[{text:"x",color:"red"},{"score":{"objective":"terf_states","name":"blocked"}}]]}
 
-scoreboard players operation calc terf_states = @s terf_data_C
 execute if entity @s[tag=terf_ship_blocks_outside_world] run data modify storage terf:temp displays.status set value {color:red,has_glowing_text:1b,messages:["Warp Core Status",{text:"Ship Bounds",color:"red"},{text:"Outside Of The",color:"red"},{text:"World!",color:"red"}]}
 
-scoreboard players operation calc terf_states = @s terf_data_B
-execute unless score @s terf_data_B matches 0 run data modify storage terf:temp displays.status set value {color:orange,has_glowing_text:1b,messages:["Warp Core Status",{text:"Target Coords",color:"gold"},{text:"Blocked!",color:"gold"},[{text:"x",color:"gold"},{"score":{"objective":"terf_states","name":"calc"}}]]}
+scoreboard players operation immovable terf_states = @s terf_data_B
+execute unless score @s terf_data_B matches 0 run data modify storage terf:temp displays.status set value {color:orange,has_glowing_text:1b,messages:["Warp Core Status",{text:"Target Coords",color:"gold"},{text:"Blocked!",color:"gold"},[{text:"x",color:"gold"},{"score":{"objective":"terf_states","name":"immovable"}}]]}
 
 execute if entity @s[tag=terf_target_blocks_outside_world] run data modify storage terf:temp displays.status set value {color:orange,has_glowing_text:1b,messages:["Warp Core Status",{text:"Target Bounds",color:"gold"},{text:"Outside Of The",color:"gold"},{text:"World!",color:"gold"}]}
 
