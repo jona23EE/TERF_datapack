@@ -1,3 +1,15 @@
-ALL RIGHTS RESERVED.
+Copyright (c) 2026 jona23
 
-Redistribution or modification of the or part of the material is NOT allowed without explicit permission from the owner @jona23
+All Rights Reserved.
+
+This source code is provided for viewing and reference purposes only.
+
+You are NOT permitted to:
+- Copy, reproduce, or redistribute this code
+- Modify or create derivative works
+- Use this code in any project (public or private)
+- Publish this code or any modified version
+
+without explicit prior written permission from the author.
+
+Unauthorized use may result in legal action.
