@@ -22,7 +22,7 @@ scoreboard players operation charge terf_states = @s terf_data_A
 
 scoreboard players operation temp2 terf_states = charge terf_states
 execute if score temp2 terf_states matches 201.. run scoreboard players set temp2 terf_states 200
-execute store result storage terf:temp args.accuracy float 0.000005 run scoreboard players get temp2 terf_states
+execute store result storage terf:temp args.accuracy float 0.00001 run scoreboard players get temp2 terf_states
 
 execute on passengers if entity @s[type=marker] at @s run function terf:entity/vehicle/art/get_target_axes
 execute on passengers if entity @s[tag=terf_art_gun] at @s run function terf:entity/vehicle/art/as_gun with storage terf:temp args
