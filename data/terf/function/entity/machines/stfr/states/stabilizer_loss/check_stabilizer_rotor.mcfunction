@@ -28,4 +28,4 @@ execute as @e[type=item_display,tag=terf_currententity] run rotate @s facing ~ ~
 
 tag @e[type=item_display] remove terf_currententity
 
-$function terf:entity/machines/stfr/stab_transform/on/stab_$(stab)
+$function terf:entity/machines/stfr/stab_transform/on/stab_$(stab) with entity @s data.terf

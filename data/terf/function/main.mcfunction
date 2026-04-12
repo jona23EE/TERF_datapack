@@ -67,7 +67,7 @@ execute as @e[type=minecraft:marker,tag=terf_super_catalyst] at @s run function 
 #nuclear stuff
 execute as @e[type=minecraft:marker,tag=terf_neutron] at @s run function terf:entity/neutron/tick with entity @s data.terf.neutron
 execute if score ETratetimer terf_states matches 10 as @e[type=minecraft:marker,tag=terf_fuel_rod,distance=0..] at @s run function terf:entity/machines/fission_reactor/rod_marker_tick
-execute as @e[type=marker,tag=terf_marked_rod,sort=random,limit=1] at @s run function terf:entity/machines/fission_reactor/compiler/as_markers
+# execute as @e[type=marker,tag=terf_marked_rod,sort=random,limit=1] at @s run function terf:entity/machines/fission_reactor/compiler/as_markers
 
 #photon ball
 execute as @e[type=minecraft:marker,tag=terf_photon_ball] at @s run function terf:entity/photon_ball/tick
