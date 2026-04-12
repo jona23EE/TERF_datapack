@@ -7,7 +7,7 @@ scoreboard players operation temp terf_states = @s terf_data_T
 scoreboard players operation temp terf_states %= 16 terf_states
 execute if score temp terf_states matches 0 if score @s terf_data_E matches ..380 run playsound minecraft:block.bell.resonate ambient @a[distance=0..] ~ ~ ~ 5 0
 
-scoreboard players set stabilizer_rotation_duration terf_states 15
+scoreboard players add @s terf_data_V 150
 function terf:entity/machines/stfr/visuals/stabilizer/rotation/rotate_stabilizers with entity @s data.terf
 function terf:entity/machines/stfr/visuals/stabilizer/animation_tick
 
