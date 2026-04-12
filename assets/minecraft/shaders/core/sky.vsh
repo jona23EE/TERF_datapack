@@ -19,6 +19,13 @@ void main() {
         pos.y = -pos.z;
         gl_Position = pos;
     }
+    else
+    {
+        gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
+
+        sphericalVertexDistance = fog_spherical_distance(Position);
+        cylindricalVertexDistance = fog_cylindrical_distance(Position);
+    }
 
     fragColor = apply_fog(ColorModulator, sphericalVertexDistance, cylindricalVertexDistance, 0.0, FogSkyEnd, FogSkyEnd, FogSkyEnd, FogColor);
     ProjInv = inverse(ProjMat * ModelViewMat);
