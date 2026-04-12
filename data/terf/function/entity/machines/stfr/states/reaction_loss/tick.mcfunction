@@ -13,8 +13,12 @@ execute if score temp terf_states matches 0 run playsound minecraft:block.bell.r
 
 execute if predicate datapipes_lib:chances/10 run function terf:entity/machines/stfr/case_freeze
 
-scoreboard players set stabilizer_rotation_duration terf_states 15
-function terf:entity/machines/stfr/visuals/stabilizer/rotation/rotate_stabilizers
+scoreboard players add @s terf_data_V 70
+scoreboard players operation temp terf_states = @s terf_data_E
+scoreboard players operation temp terf_states %= 9 terf_states
+execute if score temp terf_states matches 1 run scoreboard players remove @s terf_data_V 630
+
+function terf:entity/machines/stfr/visuals/stabilizer/rotation/rotate_stabilizers with entity @s data.terf
 
 scoreboard players operation temp terf_states = @s terf_data_T
 execute if score @s terf_data_E matches 1800.. run scoreboard players operation temp terf_states %= 2 terf_states
