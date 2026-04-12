@@ -1,4 +1,5 @@
 # Rules for Contribution:
+!! By submitting a contribution, you agree that your code will be licensed under the project’s license !!
 - Changes that break the balance or progression of the datapack will be rejected or rebalanced if possible
 - Ask @jona23 before making extreme changes to the gameplay, like a new reactor or a big machine a long time before contributing. Don't waste your time making something that won't be added.
 - Code that is bad, unoptimized or is laggy in nature will be rejected, use proper APIs
