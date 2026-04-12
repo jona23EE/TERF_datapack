@@ -1,4 +1,4 @@
-execute positioned ^ ^ ^.5 align xyz run damage @p[dx=0,dy=0,dz=0] 10 terf:high_voltage 
+execute positioned ^ ^ ^.5 align xyz run damage @p[dx=0,dy=0,dz=0] 10 terf:high_voltage
 
 execute rotated ~90 0 run particle electric_spark ^ ^ ^.125 0 0 0 1 10
 execute rotated ~-90 0 run particle electric_spark ^ ^ ^.125 0 0 0 1 10

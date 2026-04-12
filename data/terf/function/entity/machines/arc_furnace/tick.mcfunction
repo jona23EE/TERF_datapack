@@ -9,7 +9,7 @@ scoreboard players remove @s datapipes_lib_power_storage 16
 particle minecraft:flame ^ ^1 ^ 0.2 0.2 0.2 0.01 1
 execute if block ^ ^1 ^ air run return run function terf:entity/machines/arc_furnace/teleport_item
 
-scoreboard players add @s terf_data_A 1                                                 
+scoreboard players add @s terf_data_A 1
 playsound minecraft:block.campfire.crackle master @a[distance=0..] ~ ~ ~ 1 2
 particle minecraft:large_smoke ^ ^1 ^.3 0 0.2 0.2 0.1 10
 

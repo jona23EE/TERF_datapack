@@ -10,7 +10,7 @@ playsound minecraft:block.beacon.deactivate ambient @a[distance=0..] ~ ~ ~ 10 0
 playsound minecraft:block.beacon.deactivate ambient @a[distance=0..] ~ ~ ~ 10 0
 playsound minecraft:block.beacon.deactivate ambient @a[distance=0..] ~ ~ ~ 10 0
 playsound minecraft:block.beacon.deactivate ambient @a[distance=0..] ~ ~ ~ 10 0
-playsound minecraft:block.beacon.deactivate ambient @a[distance=0..] ~ ~ ~ 10 
+playsound minecraft:block.beacon.deactivate ambient @a[distance=0..] ~ ~ ~ 10 0
 particle minecraft:end_rod ~ ~ ~ 0.5 0.5 0.5 0.1 1000 force
 particle minecraft:flame ~ ~ ~ 0.5 0.5 0.5 0.1 1000 force
 particle minecraft:firework ~ ~ ~ 0.5 0.5 0.5 0.3 100 force

@@ -3,7 +3,7 @@ execute store result score @s terf_data_C run data get storage terf:temp array[0
 data modify entity @s data.terf.s set from storage terf:temp array[0].s
 data modify entity @s data.terf.z set from storage terf:temp array[0].z
 data modify entity @s data.terf.n set string storage terf:temp array[0].name 0 -10
-execute positioned ^-2 ^ ^4 run function datapipes_lib:item_transfer/remove_items/start 
+execute positioned ^-2 ^ ^4 run function datapipes_lib:item_transfer/remove_items/start
 
 tag @s add terf_body
 function terf:entity/machines/assembler/transform_on with entity @s data.terf

@@ -34,7 +34,7 @@ execute if score ender_pearls_explode_after_awhile terf_states matches 1 as @e[t
 execute if score bullets_exists terf_states matches 1.. run function terf:bullet_tick
 
 #prismarine building
-execute if score tick_prismarine_bits terf_states matches 1.. as @e[type=item_display,tag=!terf_setup,tag=terf_dark_prismarine_bit] at @s run function terf:entity/player/tool/prismarine_bit/tick 
+execute if score tick_prismarine_bits terf_states matches 1.. as @e[type=item_display,tag=!terf_setup,tag=terf_dark_prismarine_bit] at @s run function terf:entity/player/tool/prismarine_bit/tick
 execute if score tick_prismarine_bits terf_states matches 1.. run scoreboard players remove tick_prismarine_bits terf_states 1
 
 #custom particle system
@@ -67,7 +67,7 @@ execute as @e[type=minecraft:marker,tag=terf_super_catalyst] at @s run function 
 #nuclear stuff
 execute as @e[type=minecraft:marker,tag=terf_neutron] at @s run function terf:entity/neutron/tick with entity @s data.terf.neutron
 execute if score ETratetimer terf_states matches 10 as @e[type=minecraft:marker,tag=terf_fuel_rod,distance=0..] at @s run function terf:entity/machines/fission_reactor/rod_marker_tick
-execute as @e[type=marker,tag=terf_marked_rod,sort=random,limit=1] at @s run function terf:entity/machines/fission_reactor/compiler/as_markers
+# execute as @e[type=marker,tag=terf_marked_rod,sort=random,limit=1] at @s run function terf:entity/machines/fission_reactor/compiler/as_markers
 
 #photon ball
 execute as @e[type=minecraft:marker,tag=terf_photon_ball] at @s run function terf:entity/photon_ball/tick
