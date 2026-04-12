@@ -28,7 +28,7 @@ scoreboard players operation calc terf_states = @s terf_data_F
 data modify storage terf:temp displays.group_main[5] set value {messages:["","","",""],color:"white",has_glowing_text:1b}
 
 #==========| Core Composition Display
-data modify storage terf:temp displays.group_core[2] set value {messages:["Core Composition",[""],[""],["}",{"score":{"name":"core_density","objective":"terf_states"}}," mol"]],color:"white",has_glowing_text:1b}
+data modify storage terf:temp displays.group_core[2] set value {messages:["Core Composition",[""],[""],["",{"score":{"name":"core_density","objective":"terf_states"}}," mol"]],color:"white",has_glowing_text:1b}
 execute if entity @s[tag=!terf_core_online] run data modify storage terf:temp displays.group_core[2].messages[3] set value "-:-"
 function terf:entity/machines/stfr_control_panel/core_composition_graph/start
 

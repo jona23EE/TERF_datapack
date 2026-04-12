@@ -27,7 +27,7 @@ scoreboard players operation e_digit_3 terf_states %= 10 terf_states
 scoreboard players operation e_digit_4 terf_states %= 10 terf_states
 scoreboard players operation e_digit_5 terf_states %= 10 terf_states
 
-execute if score @s terf_data_E matches 3200.. run data modify storage terf:temp displays.group_main[13].messages[2] set value [{text:"T:",color:"yellow"},{"score":{"name":"e_digit_2","objective":"terf_states"}},".",{"score":{"name":"e_digit_3","objective":"terf_states"}},{"score":{"name":"e_digit_4","objective":"terf_states"}},{"score":{"name":"e_digit_5","objective":"terf_states"}},"E",{"score":{"name":"e_digit_1","objective":"terf_states"}},"°kC"]
+execute if entity @s[tag=terf_core_online] if score @s terf_data_E matches 3200.. run data modify storage terf:temp displays.group_main[13].messages[2] set value [{text:"T:",color:"yellow"},{"score":{"name":"e_digit_2","objective":"terf_states"}},".",{"score":{"name":"e_digit_3","objective":"terf_states"}},{"score":{"name":"e_digit_4","objective":"terf_states"}},{"score":{"name":"e_digit_5","objective":"terf_states"}},"E",{"score":{"name":"e_digit_1","objective":"terf_states"}},"°kC"]
 
 #decrease core scale
 scoreboard players operation temp terf_states = @s terf_data_E
