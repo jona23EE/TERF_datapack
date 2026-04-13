@@ -70,7 +70,7 @@ execute if predicate terf:has_zoom_slowness run attribute @s[tag=terf_in_space] 
 execute unless score @s terf_trigger matches 0 run function terf:entity/player/menu/clicked
 
 #snowballs
-execute if score @s terf_snowballs_thrown matches 1.. run function terf:entity/snowball/summon
+# execute if score @s terf_snowballs_thrown matches 1.. run function terf:entity/snowball/summon
 
 #skin contamination
 execute if score @s terf_data_N matches 1.. run function terf:entity/player/has_skin_contamination

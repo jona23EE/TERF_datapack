@@ -1,6 +1,4 @@
 scoreboard players set @s terf_leftgame 0
-scoreboard players set @s terf_ssmagnitude 0
-scoreboard players set @s terf_ssfrequency 0
 scoreboard players add @s terf_data_L 0
 scoreboard players add @s terf_data_O 0
 scoreboard players add @s terf_data_J 0
@@ -37,37 +35,33 @@ recipe give @s terf:control_rod_assembly
 recipe give @s terf:multiblock_core
 recipe give @s terf:data_cable
 
-recipe give @s terf:exposed_copper_from_blasting
-recipe give @s terf:weathered_copper_from_blasting
-recipe give @s terf:oxidized_copper_from_blasting
+recipe give @s terf:blasting/exposed_copper_from_blasting
+recipe give @s terf:blasting/weathered_copper_from_blasting
+recipe give @s terf:blasting/oxidized_copper_from_blasting
 
-recipe give @s terf:exposed_cut_copper_from_blasting
-recipe give @s terf:weathered_cut_copper_from_blasting
-recipe give @s terf:oxidized_cut_copper_from_blasting
+recipe give @s terf:blasting/exposed_cut_copper_from_blasting
+recipe give @s terf:blasting/weathered_cut_copper_from_blasting
+recipe give @s terf:blasting/oxidized_cut_copper_from_blasting
 
-recipe give @s terf:exposed_chiseled_copper_from_blasting
-recipe give @s terf:weathered_chiseled_copper_from_blasting
-recipe give @s terf:oxidized_chiseled_copper_from_blasting
+recipe give @s terf:blasting/exposed_chiseled_copper_from_blasting
+recipe give @s terf:blasting/weathered_chiseled_copper_from_blasting
+recipe give @s terf:blasting/oxidized_chiseled_copper_from_blasting
 
-recipe give @s terf:exposed_copper_grate_from_blasting
-recipe give @s terf:weathered_copper_grate_from_blasting
-recipe give @s terf:oxidized_copper_grate_from_blasting
+recipe give @s terf:blasting/exposed_copper_grate_from_blasting
+recipe give @s terf:blasting/weathered_copper_grate_from_blasting
+recipe give @s terf:blasting/oxidized_copper_grate_from_blasting
 
-recipe give @s terf:exposed_copper_bulb_from_blasting
-recipe give @s terf:weathered_copper_bulb_from_blasting
-recipe give @s terf:oxidized_copper_bulb_from_blasting
+recipe give @s terf:blasting/exposed_copper_bulb_from_blasting
+recipe give @s terf:blasting/weathered_copper_bulb_from_blasting
+recipe give @s terf:blasting/oxidized_copper_bulb_from_blasting
 
-recipe give @s terf:exposed_cut_copper_stairs_from_blasting
-recipe give @s terf:weathered_cut_copper_stairs_from_blasting
-recipe give @s terf:oxidized_cut_copper_stairs_from_blasting
+recipe give @s terf:blasting/exposed_copper_door_from_blasting
+recipe give @s terf:blasting/weathered_copper_door_from_blasting
+recipe give @s terf:blasting/oxidized_copper_door_from_blasting
 
-recipe give @s terf:exposed_copper_door_from_blasting
-recipe give @s terf:weathered_copper_door_from_blasting
-recipe give @s terf:oxidized_copper_door_from_blasting
-
-recipe give @s terf:exposed_copper_trapdoor_from_blasting
-recipe give @s terf:weathered_copper_trapdoor_from_blasting
-recipe give @s terf:oxidized_copper_trapdoor_from_blasting
+recipe give @s terf:blasting/exposed_copper_trapdoor_from_blasting
+recipe give @s terf:blasting/weathered_copper_trapdoor_from_blasting
+recipe give @s terf:blasting/oxidized_copper_trapdoor_from_blasting
 
 recipe give @s terf:mullermilch
 recipe give @s terf:melon_slice_from_melon
