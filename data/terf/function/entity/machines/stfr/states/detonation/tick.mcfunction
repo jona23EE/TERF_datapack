@@ -31,4 +31,5 @@ execute store result storage terf:temp args.radius int 16 run scoreboard players
 function terf:entity/machines/stfr/states/detonation/load_chunks with storage terf:temp args
 forceload add ~ ~
 
+function terf:entity/machines/multiblock_core_drop_capsules with entity @s data.terf
 function terf:entity/machines/multiblock_core_kill
