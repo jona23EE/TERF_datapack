@@ -25,6 +25,9 @@ execute if score @s terf_data_E matches 1130 run function terf:entity/machines/s
 #process visuals for this state
 execute if score @s terf_data_E matches 900.. run function terf:require/lightning_random {max_splits:100,splitp:'datapipes_lib:chances/10',contp:'datapipes_lib:chances/10'}
 
+execute store result entity 0010eff0-0010-effa-0010-cd370010c94e Rotation[0] float 0.5 run scoreboard players get @s terf_data_E
+execute if score @s terf_data_E matches 1980.. rotated as 0010eff0-0010-effa-0010-cd370010c94e rotated ~ 20 run function terf:entity/machines/stfr/states/underload/field_start
+
 particle minecraft:wax_off ~ ~ ~ 0 0 0 70 10 force
 particle flash{color:[1,1,1,1]}
 particle minecraft:gust ~ ~.2 ~ 0.01 0.01 0.01 0 1 force

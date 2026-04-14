@@ -9,7 +9,7 @@ data modify storage terf:temp displays.group_core[0].messages[3][1][].color set 
 
 execute if score @s terf_data_E matches 3070.. if predicate datapipes_lib:chances/20 run data modify storage terf:temp displays.group_main[13].messages[2][1] set value {text:"T: - °kC"}
 execute if score @s terf_data_E matches 3130.. run data modify storage terf:temp displays.group_main[13].messages[2][0].color set value "yellow"
-execute if score @s terf_data_E matches 3130.. run data modify storage terf:temp displays.group_main[13].messages[2][1] set value {text:"Err",color:"#FF0000"}
+execute if score @s terf_data_E matches 3130.. run data modify storage terf:temp displays.group_main[13].messages[2] set value {text:"Err",color:"#FF0000"}
 
 scoreboard players operation e_digit_1 terf_states = @s terf_data_Af
 scoreboard players operation e_digit_2 terf_states = e_digit_1 terf_states
@@ -41,7 +41,7 @@ execute if score @s terf_data_E matches ..4050 if score @s terf_data_Ab matches 
 scoreboard players set terminated terf_states 20
 execute if score @s terf_data_E matches 1300..4050 if score @s terf_data_Ab matches ..990 positioned ~ ~.2 ~ run function terf:entity/machines/stfr/states/shutdown_failure/unstable_shield/iterate
 execute if score @s terf_data_E matches ..1300 run function terf:entity/machines/stfr/visuals/shield/tick
-execute if score @s terf_data_E matches 300.. run scoreboard players add @s terf_data_B 10
+execute if score @s terf_data_E matches 300.. run scoreboard players add @s terf_data_B 30
 
 scoreboard players operation temp terf_states = @s terf_data_E
 scoreboard players operation temp terf_states %= 100 terf_states
@@ -90,8 +90,8 @@ execute if score @s terf_data_E matches 600 run function terf:entity/machines/st
 
 execute if score @s terf_data_E matches 750 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'stfr.shut_fail.restab_options',level:1,text:'{"text":"Re-stabilization Options Found:","color":"gold"}'}
 execute if score @s terf_data_E matches 751 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'none',level:0,text:'{"text":"- Stasis Laser Activation"}'}
-execute if score @s terf_data_E matches 752 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'none',level:0,text:'{"text":"- Replace All Fuel Capsules With Water Containing"}'}
-execute if score @s terf_data_E matches 753 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'none',level:0,text:'{"text":"Capsules For A Full Core Content Purge"}'}
+execute if score @s terf_data_E matches 752 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'none',level:0,text:'{"text":"- Replace All Fuel Capsules With Capsules Containing"}'}
+execute if score @s terf_data_E matches 753 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'none',level:0,text:'{"text":"Water For A Full Core Content Purge"}'}
  
 #open stabilizer maintenance trapdoors
 execute if score @s terf_data_E matches 760 run function terf:entity/machines/stfr/stab_transform/open_trapdoors/stab_s with entity @s data.terf
@@ -142,7 +142,7 @@ execute if score @s terf_data_E matches 2250 run function terf:entity/machines/s
 execute if score @s terf_data_E matches 2550 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'stfr.shut_fail.fusion',level:2,text:'{"text":"Fusion Of A New Element Detected! Reconfiguring Systems... Details: ","color":"red"},{"text":"Details: p+Num:8","color":"gold"}'}
 execute if score @s terf_data_E matches 2550 run scoreboard players set @a[distance=..80] terf_shake_frequency 300
 #EMP from the ridicolous amount of beta radiation oxygen fusion releases 
-execute if score @s terf_data_E matches 2550.. as @e[type=marker,distance=..128] if score @s datapipes_lib_power_storage matches 0.. run scoreboard players set @s datapipes_lib_power_storage 0
+execute if score @s terf_data_E matches 2250.. as @e[type=marker,distance=..128] if score @s datapipes_lib_power_storage matches 0.. run scoreboard players set @s datapipes_lib_power_storage 0
 execute if score @s terf_data_E matches 2850 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'stfr.shut_fail.setpoint',level:2,text:'{"text":"Automatic Shield Permeability Setpoint Unreachable Before A Containment Loss Event Occurs! ","color":"red"},{"text":"Awaiting Intervention...","color":"gold"}'}
 
 execute if score @s terf_data_E matches 3150 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'stfr.shut_fail.temp_fail',level:1,text:'{"text":"Unable To Monitor Reactor Core Temperature! Switching To Approximation Via. Photon Spectrometers.","color":"red"}'}
@@ -176,9 +176,12 @@ execute if score @s[tag=terf_stab4] terf_data_E matches 4050.. if predicate data
 execute if score @s terf_data_E matches 4350 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'stfr.shut_fail.instability',level:4,text:'{"text":"Extreme Shield Instability! Systems Predict A Complete Containment Failure In T-30 Seconds!","color":"red"}'}
 
 #rays
-#begin a bit sooner than the broadcast
+#begin a bit before the explosion
 execute if score @s terf_data_E matches 4640.. summon item_display run function terf:entity/machines/stfr/states/shutdown_failure/rays/summon
+execute if score @s terf_data_E matches 4650..4950 run function terf:entity/machines/stfr/states/shutdown_failure/wind/spawn
+execute if score @s terf_data_E matches 4650..4950 run function terf:entity/machines/stfr/states/shutdown_failure/wind/spawn
 execute as @e[type=minecraft:item_display,tag=terf_stfr_ray] at @s run function terf:entity/machines/stfr/states/shutdown_failure/rays/tick
+execute as @e[type=minecraft:text_display,tag=terf_stfr_wind] at @s run function terf:entity/machines/stfr/states/shutdown_failure/wind/tick
 execute if score @s terf_data_E matches 4950.. as @e[type=minecraft:item_display,tag=terf_stfr_ray,distance=..1] at @s run rotate @s ~1 ~-1
 
 execute if score @s terf_data_E matches 4950 run function terf:entity/machines/stfr/states/shutdown_failure/shield_blast
@@ -190,6 +193,7 @@ scoreboard players set terminated terf_states 10
 data modify storage terf:temp args set from entity @s data.terf
 data modify storage terf:temp args.max_duration set value 20
 execute if score @s terf_data_E matches 4950.. summon text_display run function terf:entity/machines/stfr/states/meltdown/dust/summon with storage terf:temp args
+execute if score @s terf_data_E matches 4950 run function terf:require/run_n_times {n:500,command:'function terf:entity/machines/stfr/states/shutdown_failure/wind/spawn'}
 execute if score @s terf_data_E matches 4950.. run particle minecraft:explosion_emitter ~ ~ ~ 0 0 0 1 1 force
 execute if score @s terf_data_E matches 4950.. run particle minecraft:firework ~ ~ ~ 0 0 0 1 100 force
 $execute if score @s terf_data_E matches 4950.. as @e[type=text_display,tag=terf_stfr_meltdown_dust,tag=terf_related_$(machine_id)] at @s run function terf:entity/machines/stfr/states/meltdown/dust/as
