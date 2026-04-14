@@ -115,12 +115,12 @@ function terf:entity/machines/stfr/execute_as_maintenances with entity @s data.t
 execute if score NETratetimer terf_states >= NETrate terf_states run function terf:entity/machines/stfr/slower_tick
 
 scoreboard players set working_stabs terf_states 6
-execute as @s[tag=!terf_stab1] run scoreboard players remove working_stabs terf_states 1
-execute as @s[tag=!terf_stab2] run scoreboard players remove working_stabs terf_states 1
-execute as @s[tag=!terf_stab3] run scoreboard players remove working_stabs terf_states 1
-execute as @s[tag=!terf_stab4] run scoreboard players remove working_stabs terf_states 1
-execute as @s[tag=!terf_stab5] run scoreboard players remove working_stabs terf_states 1
-execute as @s[tag=!terf_stab6] run scoreboard players remove working_stabs terf_states 1
+execute if entity @s[tag=!terf_stab1] run scoreboard players remove working_stabs terf_states 1
+execute if entity @s[tag=!terf_stab2] run scoreboard players remove working_stabs terf_states 1
+execute if entity @s[tag=!terf_stab3] run scoreboard players remove working_stabs terf_states 1
+execute if entity @s[tag=!terf_stab4] run scoreboard players remove working_stabs terf_states 1
+execute if entity @s[tag=!terf_stab5] run scoreboard players remove working_stabs terf_states 1
+execute if entity @s[tag=!terf_stab6] run scoreboard players remove working_stabs terf_states 1
 
 function terf:entity/machines/stfr/generate_panel_text with entity @s data.terf
 
@@ -146,9 +146,9 @@ execute if score @s terf_data_A matches 17 run function terf:entity/machines/stf
 
 execute if score @s terf_data_U matches 3.. run function terf:entity/machines/stfr/emergency_controls/power_surge/tick
 execute if score @s terf_data_Ac matches 1.. run function terf:entity/machines/stfr/emergency_controls/radiation_surge/tick
-execute as @s[tag=terf_case_shield] run function terf:entity/machines/stfr/emergency_controls/case_shield/tick
-execute as @s[tag=terf_case_shield_primed] if score @s[tag=!terf_case] terf_data_Ad matches 60001.. if score @s terf_data_A matches 3 run tag @s add terf_case_shield
-execute as @s[tag=!terf_case_shield_primed] run tag @s remove terf_case_shield
+execute if entity @s[tag=terf_case_shield] run function terf:entity/machines/stfr/emergency_controls/case_shield/tick
+execute if entity @s[tag=terf_case_shield_primed] if score @s[tag=!terf_case] terf_data_Ad matches 60001.. if score @s terf_data_A matches 3 run tag @s add terf_case_shield
+execute if entity @s[tag=!terf_case_shield_primed] run tag @s remove terf_case_shield
 
 execute store result entity @s data.fluids[1].amount int 1 run scoreboard players get coolant_amount terf_states
 execute store result entity @s data.fluids[0].amount int 1 run scoreboard players get steam_amount terf_states

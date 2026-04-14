@@ -91,10 +91,10 @@ execute if score @s terf_data_R matches 1.. run function terf:entity/player/cust
 #hazmat suit
 tag @s remove terf_full_hazmat
 scoreboard players set hazmat_pieces terf_states 0
-execute if items entity @s armor.feet *[trim~{pattern:"terf:hazmat_armor_trim"}] run function datapipes_lib:require/complex_function/2 {command1:'scoreboard players add hazmat_pieces terf_states 1',command2:'scoreboard players operation @s terf_data_A /= 2 terf_states'}
-execute if items entity @s armor.legs *[trim~{pattern:"terf:hazmat_armor_trim"}] run function datapipes_lib:require/complex_function/2 {command1:'scoreboard players add hazmat_pieces terf_states 1',command2:'scoreboard players operation @s terf_data_A /= 2 terf_states'}
-execute if items entity @s armor.chest *[trim~{pattern:"terf:hazmat_armor_trim"}] run function datapipes_lib:require/complex_function/2 {command1:'scoreboard players add hazmat_pieces terf_states 1',command2:'scoreboard players operation @s terf_data_A /= 2 terf_states'}
-execute if items entity @s armor.head *[trim~{pattern:"terf:hazmat_armor_trim"}] run function datapipes_lib:require/complex_function/2 {command1:'scoreboard players add hazmat_pieces terf_states 1',command2:'scoreboard players operation @s terf_data_A /= 4 terf_states'}
+execute if items entity @s armor.feet *[trim~{pattern:"terf:hazmat_armor_trim"}] run function terf:entity/player/hazmat_piece
+execute if items entity @s armor.legs *[trim~{pattern:"terf:hazmat_armor_trim"}] run function terf:entity/player/hazmat_piece
+execute if items entity @s armor.chest *[trim~{pattern:"terf:hazmat_armor_trim"}] run function terf:entity/player/hazmat_piece
+execute if items entity @s armor.head *[trim~{pattern:"terf:hazmat_armor_trim"}] run function terf:entity/player/hazmat_piece_head
 execute if score hazmat_pieces terf_states matches 4.. run tag @s add terf_full_hazmat
 
 #radiation

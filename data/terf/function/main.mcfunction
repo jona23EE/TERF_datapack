@@ -57,8 +57,8 @@ execute if score ETratetimer terf_states matches 10.. in minecraft:the_end as @a
 execute as @e[type=minecraft:item_display,tag=terf_meteor] at @s run function terf:entity/meteor/tick
 
 #space
-execute in terf:orbit_earth as @e[distance=0..,type=!minecraft:player,type=!minecraft:marker,type=!minecraft:item_display,tag=!terf_nogravity] run function terf:entity/in_space
-execute in terf:orbit_end as @e[distance=0..,type=!minecraft:player,type=!minecraft:marker,type=!minecraft:item_display,tag=!terf_nogravity] run function terf:entity/in_space
+execute in terf:orbit_earth as @e[type=!minecraft:player,type=!minecraft:marker,type=!minecraft:item_display,tag=!terf_nogravity] run function terf:entity/in_space
+execute in terf:orbit_end as @e[type=!minecraft:player,type=!minecraft:marker,type=!minecraft:item_display,tag=!terf_nogravity] run function terf:entity/in_space
 
 #sculk stuff
 execute as @e[type=minecraft:marker,tag=terf_sculk_charge] at @s run function terf:entity/sculk_charge/tick
@@ -66,7 +66,7 @@ execute as @e[type=minecraft:marker,tag=terf_super_catalyst] at @s run function 
 
 #nuclear stuff
 execute as @e[type=minecraft:marker,tag=terf_neutron] at @s run function terf:entity/neutron/tick with entity @s data.terf.neutron
-execute if score ETratetimer terf_states matches 10 as @e[type=minecraft:marker,tag=terf_fuel_rod,distance=0..] at @s run function terf:entity/machines/fission_reactor/rod_marker_tick
+execute if score ETratetimer terf_states matches 10 as @e[type=minecraft:marker,tag=terf_fuel_rod] at @s run function terf:entity/machines/fission_reactor/rod_marker_tick
 execute as @e[type=marker,tag=terf_marked_rod,sort=random,limit=1] at @s run function terf:entity/machines/fission_reactor/compiler/as_markers
 
 #photon ball
