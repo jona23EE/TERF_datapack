@@ -1,3 +1,4 @@
+data remove storage terf:constants fluid_dictionary
 #==================================================| Scoreboard Objectives |==================================================
 scoreboard objectives add terf_coas_click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add terf_leftgame minecraft.custom:minecraft.leave_game
@@ -125,6 +126,10 @@ data modify storage terf:constants fluid_dictionary.terf.deuterium set value {ch
 data modify storage terf:constants fluid_dictionary.terf.oxygen set value {chem:{text:"O²",color:"#81CFFF"}, name:"Oxygen", color_hex:"#81CFFF", color_dec:8507391, temp:20, corrosivity:1}
 data modify storage terf:constants fluid_dictionary.terf.helium set value {chem:{text:"He",color:"#FC7703"}, name:"Helium", color_hex:"#FC7703", color_dec:16545539, temp:20, toxicity:1, shc_per_mole:20.785512186}
 data modify storage terf:constants fluid_dictionary.terf.palladium_group_sludge set value {chem:{text:"Pd(aq)",color:"#80A4B1"}, name:"Palladium Group Sludge", color_hex:"#80A4B1", color_dec:8430769, temp:20}
+data modify storage terf:constants fluid_dictionary.terf.lapis_slurry set value {chem:{text:"Laζ⁺",color:"#1C4D9C"}, name:"Lapis Slurry", color_hex:"#2A64EF", color_dec:1854876, temp:40, toxicity:2, shc_per_mole:40.0, fusion:{reactivity_function:"terf:fluid_functions/lapis_slurry_reactivity", reactivity_peak:30000, peak_kev:2715, in_per_out:4, result:"terf.ionized_sulfur_trioxide", kev_total:3650}}
+data modify storage terf:constants fluid_dictionary.terf.ionized_sulfur_trioxide set value {chem:{text:"SO₃⁺(g)",color:"#ECDB21"}, name:"Ionized Sulfur Trioxide", color_hex:"#ECDB21", color_dec:323621933, temp:290,corrosivity:10,toxicity:10,flammability:5}
+data modify storage terf:constants fluid_dictionary.terf.liquified_lapis set value {chem:{text:"La(I)",color:"#1C4D9C"}, name:"Liquified Lapis", color_hex:"#1C4D9C", color_dec:1854876, temp:20}
+
 
 #==================================================| Custom Items |==================================================
 #set the constants of materials, aka link their ids to a components so functions can summon or give them
@@ -302,9 +307,13 @@ data modify storage terf:constants recipes.crusher.terf:palladium_group_metal se
 data modify storage terf:constants recipes.electrolyzer.water set value {1:'function datapipes_lib:fluid_transfer/add_fluid_safe {tank:1,amount:20,id:"terf.hydrogen"}',2:'function datapipes_lib:fluid_transfer/add_fluid_safe {tank:2,amount:10,id:"terf.oxygen"}',a:30,t:30}
 data modify storage terf:constants recipes.electrolyzer.terf.heavy_water set value {1:'function datapipes_lib:fluid_transfer/add_fluid_safe {tank:1,amount:20,id:"terf.deuterium"}',2:'function datapipes_lib:fluid_transfer/add_fluid_safe {tank:2,amount:10,id:"terf.oxygen"}',a:30,t:30}
 
+
+data modify storage terf:constants recipes.ionizer.terf.liquified_lapis set value {1:'function datapipes_lib:fluid_transfer/add_fluid_safe {tank:1,amount:20,id:"terf.lapis_slurry"}',a:30,t:30}
+
 ##wet mill
 data modify storage terf:constants recipes.wet_mill.gold_dust set value {z:'function datapipes_lib:fluid_transfer/add_fluid_safe {tank:0,amount:200,id:"terf.gold_slurry"}',a:200}
 data modify storage terf:constants recipes.wet_mill.terf:palladium_group_metal_dust set value {z:'function datapipes_lib:fluid_transfer/add_fluid_safe {tank:0,amount:1000,id:"terf.palladium_group_sludge"}',a:1000}
+data modify storage terf:constants recipes.wet_mill.minecraft:lapis_lazuli set value {z:'function datapipes_lib:fluid_transfer/add_fluid_safe {tank:0,amount:1000,id:"terf.liquified_lapis"}',a:1000}
 
 ##hadron collider
 data modify storage terf:constants recipes.hadron_collider.minecraft:slime_block.minecraft:coal set value {z:'summon item ~ ~ ~ {Item:{id:"minecraft:diamond",count:2b}}',l:75,x:7,a:1,b:6}
@@ -617,6 +626,7 @@ data modify storage terf:constants mb_setup_functions[{checks:"if block ~ ~ ~ cr
 data modify storage terf:constants mb_setup_functions[{checks:"if block ~ ~ ~ polished_blackstone_stairs"}].function set value 'function terf:entity/machines/capsule_interface/setup with entity @s data.terf'
 data modify storage terf:constants mb_setup_functions[{checks:"if block ~ ~ ~ brown_glazed_terracotta if block ~ ~1 ~ iron_bars"}].function set value 'function terf:entity/machines/deuterium_concentrator/setup'
 data modify storage terf:constants mb_setup_functions[{checks:"if block ~ ~ ~ redstone_block"}].function set value 'function terf:entity/machines/solar_panel/setup'
+data modify storage terf:constants mb_setup_functions[{checks:"if block ~ ~ ~ petrified_oak_slab[type=double]"}].function set value 'data modify entity @s data.terf.multiblock_function set value "run function terf:entity/machines/ionizer/tick"'
 
 #==================================================| Set Constants |==================================================
 function terf:block_colors
