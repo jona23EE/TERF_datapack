@@ -1,8 +1,8 @@
-texture_path = "C:/Users/jona23/AppData/Roaming/PrismLauncher/instances/TERF (1.21.8)/.minecraft/resourcepacks/TERFresources/assets/terf/textures/item/material"
+texture_path = "assets/terf/textures/item/material"
 
-layer1 = "C:/Users/jona23/AppData/Roaming/PrismLauncher/instances/TERF (1.21.8)/.minecraft/resourcepacks/TERFresources/assets/terf/textures/item/material/bright/ingot.png"
-layer2 = "C:/Users/jona23/AppData/Roaming/PrismLauncher/instances/TERF (1.21.8)/.minecraft/resourcepacks/TERFresources/assets/terf/textures/item/material/bright/ingot_overlay.png"
-layer3 = "C:/Users/jona23/AppData/Roaming/PrismLauncher/instances/TERF (1.21.8)/.minecraft/resourcepacks/TERFresources/assets/terf/textures/item/material/bright/ingot_secondary.png"
+layer1 = "assets/terf/textures/item/material/bright/ingot.png"
+layer2 = "assets/terf/textures/item/material/bright/ingot_overlay.png"
+layer3 = "assets/terf/textures/item/material/bright/ingot_secondary.png"
 
 import tkinter as tk
 from PIL import Image, ImageTk, ImageDraw
