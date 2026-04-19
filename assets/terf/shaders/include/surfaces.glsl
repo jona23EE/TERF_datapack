@@ -40,13 +40,20 @@ vec3 blackbody(float T)
     return clamp(vec3(r, g, b), 0.0, 1.0);
 }
 
-// Hash function
-vec2 hash(vec2 p) {
+// Sine hash function
+vec2 sinHash(vec2 p) {
     p = vec2(
         dot(p, vec2(127.1, 311.7)),
         dot(p, vec2(269.5, 183.3))
     );
     return -1.0 + 2.0 * fract(sin(p) * 43758.5453123);
+}
+
+// Hash function
+vec2 hash(vec2 p) {
+    vec3 p3 = fract(vec3(p.xyx) * vec3(0.1031, 0.1030, 0.0973));
+    p3 += dot(p3, p3.yzx + 33.33);
+    return fract((p3.xx + p3.yz) * p3.zy) * 2.0 - 1.0;
 }
 
 // Random value function
