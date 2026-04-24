@@ -20,3 +20,7 @@ function terf:entity/machines/mcfr/changetype {new_id:terf.hydrogen}
 scoreboard players add @s datapipes_lib_power_storage 0
 scoreboard players set @s datapipes_lib_power_max 10000
 data modify entity @s data.terf.height set value 0
+
+data modify entity @s data.terf.machine_name set value MCFR
+data modify entity @s data.terf.mainframe_logistics.config set value {is_output:1,load:1}
+tag @s add terf_mainframe_interested

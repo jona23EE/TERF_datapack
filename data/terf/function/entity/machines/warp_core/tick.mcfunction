@@ -87,6 +87,9 @@ execute if score @s terf_data_A matches 1 if score @s terf_data_E matches ..250 
 scoreboard players operation calc terf_states = @s terf_connected_mainframe
 $execute at @e[type=marker,tag=terf_linked_to_$(machine_id),tag=terf_warp_core_panel] if score @e[type=marker,distance=..0.01,limit=1] terf_connected_mainframe = calc terf_states if block ^-1 ^ ^ loom if block ^ ^ ^1 waxed_cut_copper run function terf:entity/machines/warp_core_panel/as_core_at_control_panel
 
+#redstone probe integration
+function terf:entity/machines/warp_core/redstone_prob_integration with entity @s data.terf
+
 #======================== Show range fields ========================
 execute if entity @s[tag=!terf_warp_core_show_range] run return fail
 

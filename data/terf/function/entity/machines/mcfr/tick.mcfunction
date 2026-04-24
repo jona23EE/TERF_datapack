@@ -59,3 +59,8 @@ data remove storage terf:temp temp
 
 #debug
 #title @a[distance=..20] actionbar [{"text":"Temp:"},{"score":{"objective":"terf_states","name":"core_temp_divided"}},{"text":" | Reaction Rate:"},{"score":{"objective":"terf_states","name":"reaction_rate"}},{"text":" | Fuel:"},{"score":{"objective":"terf_states","name":"fuel_amount"}},{"text":" | Waste:"},{"score":{"objective":"terf_states","name":"waste_amount"}},{"text":" | Pressure:"},{"score":{"objective":"terf_states","name":"pressure"}}]
+
+#redstone probe integration
+execute unless score NETratetimer terf_states >= NETrate terf_states run return fail
+scoreboard players operation calc terf_states = @s terf_connected_mainframe
+$execute as @e[type=marker,tag=terf_linked_to_$(machine_id),tag=terf_redstone_probe] at @s run function terf:entity/machines/redstone_probe/machine_tick

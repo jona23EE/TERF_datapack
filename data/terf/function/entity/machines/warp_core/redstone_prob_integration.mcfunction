@@ -1,0 +1,2 @@
+execute unless score NETratetimer terf_states >= NETrate terf_states run return fail
+$execute as @e[type=marker,tag=terf_linked_to_$(machine_id),tag=terf_redstone_probe] at @s run function terf:entity/machines/redstone_probe/machine_tick
