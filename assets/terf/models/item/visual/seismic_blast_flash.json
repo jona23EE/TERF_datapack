@@ -3,8 +3,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [16, 4080],
 	"textures": {
-		"0": "terf:item/shader_space",
-		"particle": "terf:item/shader_space"
+		"0": "terf:item/shader_required/shader4441",
+		"particle": "terf:item/shader_required/shader4441"
 	},
 	"elements": [
 		{
@@ -12,7 +12,7 @@
 			"to": [16, 16, 8],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 8]},
 			"faces": {
-				"north": {"uv": [0, 0.06275, 16, 0.12549], "texture": "#0", "tintindex": 0}
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0}
 			}
 		}
 	]
