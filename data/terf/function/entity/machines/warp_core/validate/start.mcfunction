@@ -21,6 +21,8 @@ execute store result storage terf:temp args.target_z int 1 run scoreboard player
 
 data modify storage terf:temp args.dimension set from entity @s data.terf.warp_core.dim
 
+data modify storage terf:temp argrs.machine_id set from entity @s data.terf.machine_id
+
 ## Validate target coordinates at the target coordinates
 function terf:entity/machines/warp_core/validate/target_coordinates with storage terf:temp args
 #dont continue if validating target coordinates fail

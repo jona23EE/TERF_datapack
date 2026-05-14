@@ -19,6 +19,7 @@ execute store result storage terf:temp args.x int 1 run scoreboard players opera
 execute store result storage terf:temp args.y int 1 run scoreboard players operation y2 terf_states -= y terf_states
 execute store result storage terf:temp args.z int 1 run scoreboard players operation z2 terf_states -= z terf_states
 $execute align xyz positioned ~-.001 ~-.001 ~-.001 as @e[dx=$(size_x),dy=$(size_y),dz=$(size_z),predicate=datapipes_lib:not_riding,tag=!terf_unwarpable] at @s run function terf:entity/machines/warp_core/states/warp/teleport with storage terf:temp args
+$execute as @e[type=text_display,distance=0..,tag=terf_related_$(machine_id)] at @s run function terf:entity/machines/warp_core/states/warp/teleport with storage terf:temp args
 
 #Remove oxygen
 $fill ~ ~ ~ ~$(size_x) ~$(size_y) ~$(size_z) air replace void_air
