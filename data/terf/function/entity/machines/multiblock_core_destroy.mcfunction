@@ -8,7 +8,7 @@ execute as @s[tag=terf_chunk_loader] run forceload remove ~-48 ~-48 ~48 ~48
 function terf:entity/machines/multiblock_core_drop_capsules with entity @s data.terf
 
 data modify storage terf:temp args.array set from entity @s data.fluids
-function terf:entity/explosion/antimatter/attempt_explosion 
+function terf:entity/explosion/antimatter/attempt_explosion
 
 function terf:require/custom_item_summon {count:1,id:"terf:multiblock_core"}
 particle minecraft:end_rod ~ ~ ~ 0 0 0 0.5 100 force

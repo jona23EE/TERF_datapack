@@ -15,9 +15,6 @@ execute as @e[type=minecraft:marker,tag=terf_multiblockcore,distance=..512] at @
 #load an area as big as maximum wc size
 execute in terf:intermediary_technical_storage_dimension positioned -30000000 0 -30000000 run forceload add ~ ~ ~151 ~151
 
-#validate target coords
-execute unless score @s terf_data_C matches 1.. unless score @s terf_data_B matches 1.. run function terf:entity/machines/warp_core/count_ship_blocks
-
 #no, i cant just use clone to count blocks because mojang thought it would be funny if barriers didnt count towards "Successfully cloned ... block(s)" in /clone
 #clone blocks to storage dimension and count ship blocks
 $execute store result score @s terf_data_D run clone ~ ~ ~ ~$(size_x) ~$(size_y) ~$(size_z) to terf:intermediary_technical_storage_dimension -30000000 0 -30000000 masked

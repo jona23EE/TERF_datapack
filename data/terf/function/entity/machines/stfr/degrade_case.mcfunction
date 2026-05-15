@@ -156,7 +156,7 @@ execute if predicate datapipes_lib:chances/0.3 positioned ~-2 ~1 ~4 run function
 execute if predicate datapipes_lib:chances/0.3 positioned ~2 ~1 ~-4 run function terf:entity/machines/stfr/degrade_case_block
 execute if predicate datapipes_lib:chances/0.3 positioned ~2 ~1 ~4 run function terf:entity/machines/stfr/degrade_case_block
 execute if predicate datapipes_lib:chances/0.3 positioned ~3 ~1 ~-3 run function terf:entity/machines/stfr/degrade_case_block
-execute if predicate datapipes_lib:chances/0.3 positioned ~3 ~1 ~3 run function terf:entity/machines/stfr/degrade_case_block 
+execute if predicate datapipes_lib:chances/0.3 positioned ~3 ~1 ~3 run function terf:entity/machines/stfr/degrade_case_block
 execute if predicate datapipes_lib:chances/0.3 positioned ~4 ~1 ~-2 run function terf:entity/machines/stfr/degrade_case_block
 execute if predicate datapipes_lib:chances/0.3 positioned ~4 ~1 ~2 run function terf:entity/machines/stfr/degrade_case_block
 execute if predicate datapipes_lib:chances/0.3 positioned ~-4 ~2 ~-1 run function terf:entity/machines/stfr/degrade_case_block

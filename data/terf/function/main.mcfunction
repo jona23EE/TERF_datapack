@@ -34,7 +34,7 @@ execute if score ender_pearls_explode_after_awhile terf_states matches 1 as @e[t
 execute if score bullets_exists terf_states matches 1.. run function terf:bullet_tick
 
 #prismarine building
-execute if score tick_prismarine_bits terf_states matches 1.. as @e[type=item_display,tag=!terf_setup,tag=terf_dark_prismarine_bit] at @s run function terf:entity/player/tool/prismarine_bit/tick 
+execute if score tick_prismarine_bits terf_states matches 1.. as @e[type=item_display,tag=!terf_setup,tag=terf_dark_prismarine_bit] at @s run function terf:entity/player/tool/prismarine_bit/tick
 execute if score tick_prismarine_bits terf_states matches 1.. run scoreboard players remove tick_prismarine_bits terf_states 1
 
 #custom particle system
