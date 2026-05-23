@@ -1,0 +1,101 @@
+name: Publish resource pack
+
+# Fires only when assets/pack.mcmeta changes — bumping its "version" field
+# IS the release action. Texture/sound edits between bumps accumulate
+# silently and ship with the next bump.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/pack.mcmeta'
+  workflow_dispatch:
+
+concurrency:
+  group: publish-resourcepack
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  MODRINTH_SLUG: troty-energy-research-facility-resource-pack
+  GAME_VERSION: "1.21.11"
+  # Set to "false" to skip creating a GitHub release on each version bump.
+  CREATE_GITHUB_RELEASE: "true"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read version from assets/pack.mcmeta
+        id: ver
+        run: |
+          VERSION=$(jq -r '.pack.version' assets/pack.mcmeta)
+          if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
+            echo "::error::assets/pack.mcmeta is missing a .pack.version field"
+            exit 1
+          fi
+          TAG="resourcepack-v${VERSION}"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+          echo "name=TERF resource pack ${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "Computed: ${VERSION} (tag ${TAG})"
+
+      - name: Skip if this version was already published
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        run: |
+          SKIP=false
+          if gh release view "${{ steps.ver.outputs.tag }}" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "GitHub release ${{ steps.ver.outputs.tag }} exists."
+            SKIP=true
+          fi
+          EXISTS=$(curl -sS -H "Authorization: $MODRINTH_TOKEN" \
+            "https://api.modrinth.com/v2/project/${MODRINTH_SLUG}/version" \
+            | jq -r --arg v "${{ steps.ver.outputs.version }}" \
+                '[.[] | select(.version_number == $v)] | length')
+          if [ "$EXISTS" -gt 0 ]; then
+            echo "Modrinth already has version ${{ steps.ver.outputs.version }}."
+            SKIP=true
+          fi
+          echo "skip=${SKIP}" >> "$GITHUB_OUTPUT"
+
+      - name: Build resource pack zip
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          # Use repo's pack.png as the RP icon if assets/ doesn't have its own.
+          if [ ! -f assets/pack.png ]; then
+            cp pack.png assets/pack.png
+          fi
+          mkdir -p dist
+          (cd assets && zip -r "../dist/TERF-resourcepack-${{ steps.ver.outputs.version }}.zip" .)
+          ls -lh dist/
+
+      - name: Upload to Modrinth
+        if: steps.gate.outputs.skip != 'true'
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          modrinth-id: ${{ env.MODRINTH_SLUG }}
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          files: dist/TERF-resourcepack-*.zip
+          name: ${{ steps.ver.outputs.name }}
+          version: ${{ steps.ver.outputs.version }}
+          version-type: release
+          loaders: minecraft
+          game-versions: ${{ env.GAME_VERSION }}
+          changelog: |
+            Automated publish from commit ${{ github.sha }}.
+            See https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+
+      - name: Create GitHub release
+        if: steps.gate.outputs.skip != 'true' && env.CREATE_GITHUB_RELEASE == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.ver.outputs.tag }}
+          name: ${{ steps.ver.outputs.name }}
+          files: dist/TERF-resourcepack-*.zip
+          generate_release_notes: true
