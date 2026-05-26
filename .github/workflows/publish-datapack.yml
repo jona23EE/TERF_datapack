@@ -1,0 +1,98 @@
+name: Publish datapack
+
+# Fires only when pack.mcmeta changes — bumping the "version" field IS
+# the release action. Code commits between bumps accumulate silently and
+# ship with the next bump.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pack.mcmeta'
+  workflow_dispatch:
+
+concurrency:
+  group: publish-datapack
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # needed to create the GitHub release
+
+env:
+  MODRINTH_SLUG: troty-energy-research-facility
+  GAME_VERSION: "1.21.11"
+  # Set to "false" to skip creating a GitHub release on each version bump.
+  CREATE_GITHUB_RELEASE: "true"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read version from pack.mcmeta
+        id: ver
+        run: |
+          VERSION=$(jq -r '.pack.version' pack.mcmeta)
+          if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
+            echo "::error::pack.mcmeta is missing a .pack.version field"
+            exit 1
+          fi
+          TAG="datapack-v${VERSION}"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+          echo "name=TERF datapack ${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "Computed: ${VERSION} (tag ${TAG})"
+
+      - name: Skip if this version was already published
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        run: |
+          SKIP=false
+          if gh release view "${{ steps.ver.outputs.tag }}" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "GitHub release ${{ steps.ver.outputs.tag }} exists."
+            SKIP=true
+          fi
+          EXISTS=$(curl -sS -H "Authorization: $MODRINTH_TOKEN" \
+            "https://api.modrinth.com/v2/project/${MODRINTH_SLUG}/version" \
+            | jq -r --arg v "${{ steps.ver.outputs.version }}" \
+                '[.[] | select(.version_number == $v)] | length')
+          if [ "$EXISTS" -gt 0 ]; then
+            echo "Modrinth already has version ${{ steps.ver.outputs.version }}."
+            SKIP=true
+          fi
+          echo "skip=${SKIP}" >> "$GITHUB_OUTPUT"
+
+      - name: Build datapack zip
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          mkdir -p dist
+          zip -r "dist/TERF-datapack-${{ steps.ver.outputs.version }}.zip" \
+              data pack.mcmeta pack.png LICENSE.txt README.md
+          ls -lh dist/
+
+      - name: Upload to Modrinth
+        if: steps.gate.outputs.skip != 'true'
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          modrinth-id: ${{ env.MODRINTH_SLUG }}
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          files: dist/TERF-datapack-*.zip
+          name: ${{ steps.ver.outputs.name }}
+          version: ${{ steps.ver.outputs.version }}
+          version-type: release
+          loaders: datapack
+          game-versions: ${{ env.GAME_VERSION }}
+          changelog: |
+            Automated publish from commit ${{ github.sha }}.
+            See https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+
+      - name: Create GitHub release
+        if: steps.gate.outputs.skip != 'true' && env.CREATE_GITHUB_RELEASE == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.ver.outputs.tag }}
+          name: ${{ steps.ver.outputs.name }}
+          files: dist/TERF-datapack-*.zip
+          generate_release_notes: true
