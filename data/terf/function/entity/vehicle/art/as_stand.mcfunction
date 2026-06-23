@@ -1,1 +1,0 @@
-$rotate @s $(amount) ~

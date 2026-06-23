@@ -1,1 +1,0 @@
-execute align xyz run summon item_display ~.5 ~.5 ~.5 {teleport_duration:3,Tags:["terf_stone_plate"],Passengers:[{id:"minecraft:interaction",height:0.0625f,response:1b,Tags:["terf_stone_plate"]}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.03125f,0f],scale:[1f,0.0625f,1f]},item:{id:"minecraft:cobblestone"}}

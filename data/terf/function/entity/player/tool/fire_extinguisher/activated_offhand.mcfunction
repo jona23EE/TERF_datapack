@@ -1,3 +1,0 @@
-execute if predicate datapipes_lib:pressing_sneak if predicate datapipes_lib:pressing_sprint unless predicate datapipes_lib:pressing_left unless predicate datapipes_lib:pressing_right unless predicate datapipes_lib:pressing_forwards unless predicate datapipes_lib:pressing_backwards unless predicate datapipes_lib:pressing_jump anchored eyes positioned ^ ^ ^ run return run function terf:entity/player/tool/fire_extinguisher/place_raycast_start
-
-execute unless function terf:require/is_item_broken_offhand anchored eyes positioned ^.4 ^-.2 ^ run function terf:entity/player/tool/fire_extinguisher/spray {hand:"offhand"}

@@ -1,2 +1,0 @@
-execute if score NETratetimer terf_states >= NETrate terf_states unless data entity @s data.terf.stored_recipe if score @s datapipes_lib_power_storage matches 6.. run function terf:entity/machines/rolling_mill/checks
-execute if data entity @s[tag=terf_rolling_mill_case] data.terf.stored_recipe if score @s datapipes_lib_power_storage matches 6.. run function terf:entity/machines/rolling_mill/operation with entity @s data.terf.stored_recipe

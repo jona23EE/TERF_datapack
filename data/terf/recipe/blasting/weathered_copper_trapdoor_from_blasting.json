@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "minecraft:exposed_copper_trapdoor",
-    "result": {
-        "id": "minecraft:weathered_copper_trapdoor"
-    },
-    "experience": 0,
-    "cookingtime": 600
-}

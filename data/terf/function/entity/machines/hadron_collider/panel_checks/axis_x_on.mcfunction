@@ -1,2 +1,0 @@
-$execute positioned ^ ^ ^1 if $(axis_x) run return run function terf:entity/machines/hadron_collider/panel_checks/axis_x_on with storage datapipes_lib:temp args
-$execute positioned ^ ^ ^1 if block ~ ~ ~ $(corner) run function terf:entity/machines/hadron_collider/panel_checks/corner_on with storage datapipes_lib:temp args

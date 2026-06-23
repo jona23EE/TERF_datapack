@@ -1,2 +1,0 @@
-$data modify storage datapipes_lib:temp args set value {axis_x:'$(axis_x)',axis_y:'$(axis_y)',axis_z:'$(axis_z)',corner:'$(corner)'}
-$execute if block ~ ~ ~ $(corner) run function terf:entity/machines/hadron_collider/panel_checks/corner_on with storage datapipes_lib:temp args

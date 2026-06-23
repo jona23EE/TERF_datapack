@@ -1,2 +1,0 @@
-tellraw @a ["",{"text":"[",color:"#FF00FF"},{"text":"S","color":"red"},{"text":"Y","color":"gold"},{"text":"S","color":"yellow"},{"text":"T","color":"green"},{"text":"E","color":"aqua"},{"text":"M","color":"green"},{"text":"] Indev Debug Features Disabled!",color:"#FF00FF"}]
-scoreboard players set debug_features terf_states 0

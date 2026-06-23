@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:smithing_trim",
-  "addition": "minecraft:netherite_ingot",
-  "base": "#minecraft:trimmable_armor",
-  "template": "minecraft:ochre_froglight",
-  "pattern": "terf:hazmat_armor_trim"
-}

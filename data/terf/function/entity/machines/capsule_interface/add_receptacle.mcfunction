@@ -1,3 +1,0 @@
-$summon item_display ~ ~ ~ {Rotation:[$(yaw)f,0f],Tags:["terf_related_$(machine_id)"],item:{id:"minecraft:stone",components:{item_model:"terf:visual/receptacle/polished_blackstone"}}}
-$summon interaction ~ ~-.5005 ~ {width:1.01,height:1.01,Rotation:[$(yaw)f,0f],Tags:["terf_related_$(machine_id)","terf_receptacle"],response:1b,data:{terf:{rid:0,machine_id:$(machine_id)},on_player_click:"function terf:entity/machines/capsule_interface/receptacle_clicked with entity @s data.terf"}}
-setblock ~ ~ ~ air

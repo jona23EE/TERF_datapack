@@ -1,1 +1,0 @@
-$title @s[tag=terf_music_crediting] actionbar [{"text":"Now Playing: ","color":"#5500FF"},{"text":"$(music)","color":"#FF00FF"}]

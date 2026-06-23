@@ -1,7 +1,0 @@
-{
-  "asset_id": "terf:hazmat",
-  "description": {
-    "translate": "trim_pattern.terf.hazmat"
-  },
-  "template_item": "minecraft:ochre_froglight"
-}

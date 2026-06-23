@@ -1,1 +1,0 @@
-$loot spawn ~ ~ ~ mine ~ ~ ~ netherite_pickaxe[enchantments={fortune:$(level)}]

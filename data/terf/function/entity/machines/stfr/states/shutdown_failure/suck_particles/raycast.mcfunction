@@ -1,3 +1,0 @@
-scoreboard players remove temp terf_states 1
-execute if score temp terf_states matches ..0 run return run particle white_smoke ~ ~ ~ ^ ^ ^-1000000000 0.0000000005 0 force
-execute positioned ^ ^ ^.3 if block ~.3 ~ ~ #minecraft:air if block ~ ~.3 ~ #minecraft:air if block ~ ~ ~.3 #minecraft:air if block ~-.3 ~ ~ #minecraft:air if block ~ ~-.3 ~ #minecraft:air if block ~ ~ ~-.3 #minecraft:air run function terf:entity/machines/stfr/states/shutdown_failure/suck_particles/raycast

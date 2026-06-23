@@ -1,6 +1,0 @@
-gamerule locator_bar false
-gamerule players_sleeping_percentage 50
-worldborder set 10000
-worldborder warning distance 100
-gamerule respawn_radius 200
-gamerule max_block_modifications 2147483647

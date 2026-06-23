@@ -1,3 +1,0 @@
-$execute as @e[type=interaction,tag=terf_related_$(machine_id),tag=terf_receptacle] run function terf:entity/receptacle/unlock_capsule with entity @s data.terf
-$execute as @e[type=interaction,tag=terf_related_$(machine_id),tag=terf_receptacle] at @s positioned ~ ~.5 ~ if block ~ ~ ~ barrier run setblock ~ ~ ~ air
-$execute as @e[type=item_display,tag=terf_related_$(machine_id),tag=terf_receptacle] run function terf:require/drop_item_display

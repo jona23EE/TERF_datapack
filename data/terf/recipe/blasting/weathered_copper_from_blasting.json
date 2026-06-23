@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "minecraft:exposed_copper",
-    "result": {
-        "id": "minecraft:weathered_copper"
-    },
-    "experience": 0,
-    "cookingtime": 600
-}

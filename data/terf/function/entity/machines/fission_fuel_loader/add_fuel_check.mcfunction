@@ -1,3 +1,0 @@
-execute unless block ~ ~1 ~ #terf:fission_fuel_rod run return run scoreboard players set terminated terf_states 1
-execute positioned ~ ~1 ~ if entity @e[type=minecraft:marker,tag=terf_fuel_rod,distance=..0.01] run function terf:entity/machines/fission_fuel_loader/add_fuel_check
-execute if score mode terf_states matches 0 as @e[type=minecraft:marker,tag=terf_fuel_rod,distance=..0.01] at @s run tp @s ~ ~1 ~

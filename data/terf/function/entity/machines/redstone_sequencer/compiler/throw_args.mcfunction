@@ -1,1 +1,0 @@
-$data modify entity @s data.terf.error set value '[Pg:$(page) Char:$(character)] $(code)'

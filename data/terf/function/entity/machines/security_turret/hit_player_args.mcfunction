@@ -1,1 +1,0 @@
-$execute unless data storage terf:temp temp[{i:$(id)}] run function terf:entity/machines/security_turret/damage_entity

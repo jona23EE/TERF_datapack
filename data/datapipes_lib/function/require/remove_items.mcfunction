@@ -1,1 +1,0 @@
-$item modify block ~ ~ ~ container.$(slot) {"function":"minecraft:set_count","count":-$(amount),"add":true}

@@ -1,1 +1,0 @@
-$execute rotated $(x) $(y) run function terf:entity/player/tool/tau_cannon/raycast

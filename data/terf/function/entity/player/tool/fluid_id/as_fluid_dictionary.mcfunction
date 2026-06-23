@@ -1,1 +1,0 @@
-$data modify entity 000773bb-fffa-1d25-fffd-d5ccffff5223 item.components.minecraft:custom_model_data set value {colors:[I;$(color_dec)]}

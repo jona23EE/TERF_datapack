@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#minecraft:terracotta",
-    "minecraft:smooth_red_sandstone",
-    "minecraft:smooth_basalt",
-    "minecraft:chiseled_quartz_block"
-  ]
-}

@@ -1,2 +1,0 @@
-execute if block ~ ~ ~ cyan_glazed_terracotta positioned ~ ~-1 ~ run function terf:entity/machines/crane/lower_winch/deactivate_bottom_rod
-execute if score rod_activated terf_states matches 1 if block ~ ~ ~ minecraft:light_blue_glazed_terracotta run function terf:entity/machines/crane/lower_winch/deactivate_rod

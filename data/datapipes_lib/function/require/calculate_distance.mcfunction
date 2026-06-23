@@ -1,2 +1,0 @@
-$data modify entity 0010ccd2-0010-cd37-0010-cd360010c8e1 transformation set value [$(x)f,0f,0f,0f,$(y)f,0f,0f,0f,$(z)f,0f,0f,0f,0f,0f,0f,1f]
-data modify storage datapipes_lib:temp output set from entity 0010ccd2-0010-cd37-0010-cd360010c8e1 transformation.scale[0]

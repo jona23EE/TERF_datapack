@@ -1,1 +1,0 @@
-$scoreboard players set power terf_states $(value)

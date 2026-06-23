@@ -1,1 +1,0 @@
-execute as @n[type=minecraft:marker,tag=terf_multiblockcore,tag=terf_mcfr] at @s run function terf:entity/player/tool/multimeter/multiblock_core_checks

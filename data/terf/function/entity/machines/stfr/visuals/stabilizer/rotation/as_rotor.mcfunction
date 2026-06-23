@@ -1,2 +1,0 @@
-execute if entity @s[tag=terf_stab_rotor_vertical] run return run data modify entity @s transformation.left_rotation set from storage terf:temp args.vertical
-data modify entity @s transformation.left_rotation set from storage terf:temp args.horizontal

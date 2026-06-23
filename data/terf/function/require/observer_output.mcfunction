@@ -1,6 +1,0 @@
-$execute if block ~ ~ ~ minecraft:observer[facing=up] positioned ~ ~-1 ~ run return run function $(cmd)
-$execute if block ~ ~ ~ minecraft:observer[facing=south] positioned ~ ~ ~-1 run return run function $(cmd)
-$execute if block ~ ~ ~ minecraft:observer[facing=east] positioned ~-1 ~ ~ run return run function $(cmd)
-$execute if block ~ ~ ~ minecraft:observer[facing=north] positioned ~ ~ ~1 run return run function $(cmd)
-$execute if block ~ ~ ~ minecraft:observer[facing=west] positioned ~1 ~ ~ run return run function $(cmd)
-$execute if block ~ ~ ~ minecraft:observer[facing=down] positioned ~ ~1 ~ run return run function $(cmd)

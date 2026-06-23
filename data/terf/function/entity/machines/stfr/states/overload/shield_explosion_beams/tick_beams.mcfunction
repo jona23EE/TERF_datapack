@@ -1,1 +1,0 @@
-$execute as @e[type=item_display,tag=terf_stfr_shield_explosion,tag=terf_related_$(machine_id),distance=..1] run function terf:entity/machines/stfr/states/overload/shield_explosion_beams/tick

@@ -1,1 +1,0 @@
-$discordsrv broadcast $(prefix)

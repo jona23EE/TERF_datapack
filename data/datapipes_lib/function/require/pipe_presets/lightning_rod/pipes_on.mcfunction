@@ -1,1 +1,0 @@
-execute if block ~ ~ ~ waxed_cut_copper run function datapipes_lib:require/pipe_presets/lightning_rod/corner_on

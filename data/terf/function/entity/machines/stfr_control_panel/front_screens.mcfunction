@@ -1,8 +1,0 @@
-data modify block ^-4 ^4 ^-1 front_text set from storage terf:temp displays.group_main[10]
-data modify block ^-3 ^4 ^-1 front_text set from storage terf:temp displays.group_main[11]
-data modify block ^-2 ^4 ^-1 front_text set from storage terf:temp displays.group_main[12]
-data modify block ^-1 ^4 ^-1 front_text set from storage terf:temp displays.group_main[13]
-data modify block ^ ^4 ^-1 front_text set from storage terf:temp displays.group_main[14]
-data modify block ^1 ^4 ^-1 front_text set from storage terf:temp displays.group_main[15]
-data modify block ^2 ^4 ^-1 front_text set from storage terf:temp displays.group_main[16]
-data modify block ^3 ^4 ^-1 front_text set from storage terf:temp displays.group_main[17]

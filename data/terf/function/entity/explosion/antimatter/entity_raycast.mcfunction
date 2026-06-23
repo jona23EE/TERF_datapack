@@ -1,2 +1,0 @@
-execute positioned ~-.5 ~-.5 ~-.5 unless entity @s[dx=0,dy=0,dz=0] positioned ~.5 ~.5 ~.5 if block ~ ~ ~ #minecraft:air positioned ^ ^ ^1 run return run function terf:entity/explosion/antimatter/entity_raycast
-execute positioned ~-.5 ~-.5 ~-.5 if entity @s[dx=0,dy=0,dz=0] run damage @s 2 terf:antimatter at ^ ^ ^-100

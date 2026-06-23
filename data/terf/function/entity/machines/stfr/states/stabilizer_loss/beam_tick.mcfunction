@@ -1,1 +1,0 @@
-$execute as @e[type=item_display,tag=terf_stab_loss_laser,tag=terf_related_$(machine_id)] run data modify entity @s item.components.minecraft:firework_explosion.colors[0] set from storage terf:constants blackbody.$(temp)

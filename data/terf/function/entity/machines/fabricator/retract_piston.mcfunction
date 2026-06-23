@@ -1,2 +1,0 @@
-execute if block ^-1 ^3 ^ minecraft:waxed_lightning_rod[facing=down,powered=true] run setblock ^-1 ^3 ^ minecraft:waxed_lightning_rod[facing=down,powered=false]
-execute if block ^-1 ^2 ^ minecraft:piston run setblock ^-1 ^2 ^ minecraft:piston[facing=down,extended=false]

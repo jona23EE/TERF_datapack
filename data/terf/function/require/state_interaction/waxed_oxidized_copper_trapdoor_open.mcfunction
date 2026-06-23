@@ -1,9 +1,0 @@
-execute if block ~ ~ ~ waxed_oxidized_copper_trapdoor[open=false] run playsound minecraft:block.copper_trapdoor.open block @a[distance=0..] ~ ~ ~ 1
-execute if block ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=north,half=bottom,open=false] run return run setblock ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=north,half=bottom,open=true]
-execute if block ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=north,half=top,open=false] run return run setblock ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=north,half=top,open=true]
-execute if block ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=south,half=bottom,open=false] run return run setblock ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=south,half=bottom,open=true]
-execute if block ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=south,half=top,open=false] run return run setblock ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=south,half=top,open=true]
-execute if block ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=east,half=bottom,open=false] run return run setblock ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=east,half=bottom,open=true]
-execute if block ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=east,half=top,open=false] run return run setblock ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=east,half=top,open=true]
-execute if block ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=west,half=bottom,open=false] run return run setblock ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=west,half=bottom,open=true]
-execute if block ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=west,half=top,open=false] run setblock ~ ~ ~ waxed_oxidized_copper_trapdoor[facing=west,half=top,open=true]

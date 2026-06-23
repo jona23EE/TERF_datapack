@@ -1,1 +1,0 @@
-$execute positioned ^ ^ ^$(distance) positioned over world_surface run function terf:entity/explosion/large_explosion/downcast

@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "minecraft:copper_bulb",
-    "result": {
-        "id": "minecraft:exposed_copper_bulb"
-    },
-    "experience": 0,
-    "cookingtime": 600
-}

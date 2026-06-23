@@ -1,1 +1,0 @@
-$execute store success score succeeded terf_states run scoreboard players set temp terf_states $(id)

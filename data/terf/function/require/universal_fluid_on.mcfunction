@@ -1,3 +1,0 @@
-execute if block ~ ~ ~ waxed_cut_copper run return run function datapipes_lib:fluid_transfer/copper_pipe_checks/on/connectedcopperpipeson
-execute if block ~ ~ ~ chiseled_quartz_block run return run function datapipes_lib:require/custom_pipe/pipes_on {axis:quartz_pillar,corner:chiseled_quartz_block}
-execute if block ~ ~ ~ smooth_basalt run return run function datapipes_lib:require/custom_pipe/pipes_on {axis:polished_basalt,corner:smooth_basalt}

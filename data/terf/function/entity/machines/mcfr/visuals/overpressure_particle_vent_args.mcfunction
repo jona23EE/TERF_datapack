@@ -1,1 +1,0 @@
-$particle $(particle) ^$(x) ^$(y) ^.01 ^ ^ ^$(force) 0.000000001 0 force

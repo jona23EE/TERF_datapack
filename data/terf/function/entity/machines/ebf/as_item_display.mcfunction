@@ -1,1 +1,0 @@
-$data merge entity @s {Tags:["terf_related_$(machine_id)"],item:{id:"minecraft:carrot_on_a_stick",components:{item_model:"terf:visual/ebf_glow"}},transformation:{scale:[2f,2f,2f]},brightness:{block:15,sky:15}}

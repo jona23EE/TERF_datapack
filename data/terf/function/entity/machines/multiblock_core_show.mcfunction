@@ -1,1 +1,0 @@
-$summon item_display ~ ~ ~ {Tags:["terf_multiblock_beam","terf_related_$(machine_id)"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.3f,100f,0.3f]},item:{id:"minecraft:white_stained_glass",count:1},brightness:{sky:15,block:15}}

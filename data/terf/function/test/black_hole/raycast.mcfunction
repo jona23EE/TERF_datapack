@@ -1,2 +1,0 @@
-execute if block ~ ~ ~ #minecraft:air positioned ^ ^ ^1 run return run function terf:test/black_hole/raycast
-execute unless block ~ ~ ~ #terf:indestructible unless block ~ ~ ~ water run function terf:test/black_hole/block_into_block_display

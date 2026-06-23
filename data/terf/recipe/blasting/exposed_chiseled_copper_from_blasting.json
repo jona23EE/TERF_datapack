@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "minecraft:chiseled_copper",
-    "result": {
-        "id": "minecraft:exposed_chiseled_copper"
-    },
-    "experience": 0,
-    "cookingtime": 600
-}

@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "minecraft:weathered_copper_bulb",
-    "result": {
-        "id": "minecraft:oxidized_copper_bulb"
-    },
-    "experience": 0,
-    "cookingtime": 600
-}

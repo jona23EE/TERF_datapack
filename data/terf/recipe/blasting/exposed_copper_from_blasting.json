@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "minecraft:copper_block",
-    "result": {
-        "id": "minecraft:exposed_copper"
-    },
-    "experience": 0,
-    "cookingtime": 600
-}

@@ -1,3 +1,0 @@
-#this is really interisting, slow falling is used here to get rid off the particles that appear when you fall on a block
-$summon armor_stand ~ ~ ~ {data:{terf:{machine_id:$(machine_id)}},Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,Tags:["terf_gas_oxygen","terf_nogravity","terf_related_$(machine_id)","terf_currententity"],attributes:[{id:"minecraft:scale",base:0.0}],active_effects:[{id:"minecraft:slow_falling",amplifier:0,duration:-1,ambient:1b}]}
-tag @e[type=armor_stand,tag=terf_currententity] remove terf_currententity

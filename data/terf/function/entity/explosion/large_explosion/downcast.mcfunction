@@ -1,2 +1,0 @@
-execute positioned ~ ~-1 ~ if block ~ ~ ~ #terf:nuke_shockwave_ignored run function terf:entity/explosion/large_explosion/downcast
-execute unless block ~ ~-1 ~ #terf:nuke_shockwave_ignored run function terf:entity/explosion/large_explosion/shockwave

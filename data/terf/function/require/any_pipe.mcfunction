@@ -1,2 +1,0 @@
-execute if predicate datapipes_lib:copper_pipe run return run function datapipes_lib:fluid_transfer/copper_pipe_checks/on/connectedcopperpipeson
-execute if block ~ ~ ~ minecraft:smooth_basalt run function datapipes_lib:require/custom_pipe/pipes_on {axis:polished_basalt,corner:smooth_basalt}

@@ -1,1 +1,0 @@
-$execute at @s $(multiblock_function)

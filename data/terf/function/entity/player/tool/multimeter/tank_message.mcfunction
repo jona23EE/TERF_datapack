@@ -1,1 +1,0 @@
-$tellraw @a[distance=..6,tag=terf_currententity] [{"text":"[Multimeter]","color":"green"},{"text":" $(name)","color":"$(color_hex)"},{"text":" | Amount: $(amount)/$(max) | Temperature: $(temp)°C","color":"gold"}]

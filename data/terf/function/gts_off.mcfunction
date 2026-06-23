@@ -1,2 +1,0 @@
-tellraw @a ["",{"text":"["},{"text":"S","color":"red"},{"text":"Y","color":"gold"},{"text":"S","color":"yellow"},{"text":"T","color":"green"},{"text":"E","color":"aqua"},{"text":"M","color":"green"},{"text":"] Gametime-Syncer Deactivated!"}]
-scoreboard players set gametime_syncer terf_states 0

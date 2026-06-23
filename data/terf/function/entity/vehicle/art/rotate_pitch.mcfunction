@@ -1,1 +1,0 @@
-$execute rotated ~ ~$(amount) if block ^ ^ ^3.6 air if block ^ ^ ^3.4 air if block ^ ^ ^3.2 air if block ^ ^ ^3 air if block ^ ^ ^2.8 air if block ^ ^ ^2.6 air if block ^ ^ ^2.4 air if block ^ ^ ^2.2 air if block ^ ^ ^2 air if block ^ ^ ^1.8 air if block ^ ^ ^1.6 air if block ^ ^ ^1.4 air if block ^ ^ ^1.2 air if block ^ ^ ^1 air run rotate @s ~ ~

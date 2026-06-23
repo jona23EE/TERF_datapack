@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "minecraft:weathered_chiseled_copper",
-    "result": {
-        "id": "minecraft:oxidized_chiseled_copper"
-    },
-    "experience": 0,
-    "cookingtime": 600
-}

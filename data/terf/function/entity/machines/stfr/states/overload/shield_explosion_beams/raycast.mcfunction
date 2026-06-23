@@ -1,2 +1,0 @@
-scoreboard players add temp terf_states 3
-execute positioned ^ ^ ^.3 if block ~.3 ~ ~ #terf:laser_can_go_through if block ~ ~.3 ~ #terf:laser_can_go_through if block ~ ~ ~.3 #terf:laser_can_go_through if block ~-.3 ~ ~ #terf:laser_can_go_through if block ~ ~-.3 ~ #terf:laser_can_go_through if block ~ ~ ~-.3 #terf:laser_can_go_through if score temp terf_states matches ..2560 run function terf:entity/machines/stfr/states/overload/shield_explosion_beams/raycast

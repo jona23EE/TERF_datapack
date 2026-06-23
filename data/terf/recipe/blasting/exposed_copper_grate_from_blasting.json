@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "minecraft:copper_grate",
-    "result": {
-        "id": "minecraft:exposed_copper_grate"
-    },
-    "experience": 0,
-    "cookingtime": 600
-}

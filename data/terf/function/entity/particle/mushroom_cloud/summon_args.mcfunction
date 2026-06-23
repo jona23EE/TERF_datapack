@@ -1,1 +1,0 @@
-$execute rotated $(yaw) 0 run tp @s ^ ^ ^$(dist) ~180 -90

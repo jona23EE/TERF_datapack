@@ -1,3 +1,0 @@
-$execute as @e[tag=terf_receptacle,tag=terf_related_$(machine_id),tag=terf_receptacle_5] at @s positioned ^ ^ ^1 run function terf:require/state_interaction/waxed_oxidized_copper_trapdoor_open
-$execute as @e[tag=terf_receptacle,tag=terf_related_$(machine_id),tag=terf_receptacle_5] at @s positioned ^ ^ ^2 run function terf:require/state_interaction/waxed_oxidized_copper_trapdoor_open
-execute rotated 90 0 run function terf:entity/machines/stfr/actions/stabilizer/trapdoors_open/open_rotated

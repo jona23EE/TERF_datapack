@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:smithing_trim",
-  "addition": "minecraft:redstone",
-  "base": "#terf:trimmable_magnetic",
-  "template": "minecraft:lodestone",
-  "pattern": "terf:magnetic_armor_trim"
-}

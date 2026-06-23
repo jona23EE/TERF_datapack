@@ -1,1 +1,0 @@
-$data merge entity @s {text_opacity:$(opacity),text:{color:"$(color)"},start_interpolation:0}

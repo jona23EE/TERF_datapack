@@ -1,2 +1,0 @@
-execute positioned ~ ~1 ~ if entity @e[type=minecraft:marker,tag=terf_fuel_rod,distance=..0.01] run return run function terf:entity/machines/fission_fuel_loader/particle_on_top
-function datapipes_lib:require/with_args/3 with storage terf:temp args

@@ -1,2 +1,0 @@
-function terf:require/turn_on_dark_oak_button
-function terf:require/turn_off_dark_oak_button

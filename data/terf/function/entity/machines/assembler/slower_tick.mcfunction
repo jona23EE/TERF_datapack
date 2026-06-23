@@ -1,3 +1,0 @@
-tag @s remove terf_body
-execute if function terf:entity/machines/assembler/structure_checks/is_body_valid run return run tag @s add terf_body
-execute if entity @s[tag=!terf_body] run data merge block ^-2 ^1 ^5 {front_text:{has_glowing_text:1b,messages:[{text:"    Assembler    ",color:"yellow",underlined:1b},"",{text:"Assembler Body",color:red},{text:"Broken!",color:red}],has_glowing_text:1b,color:"yellow"},is_waxed:1b}

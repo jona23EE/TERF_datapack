@@ -1,2 +1,0 @@
-execute if score @s terf_data_A matches 1 run function terf:entity/machines/lamp_controller/turn_on_lever
-execute if score @s terf_data_A matches 0 run function terf:entity/machines/lamp_controller/turn_off_lever

@@ -1,4 +1,0 @@
-$execute as @e[tag=terf_related_$(machine_id),tag=terf_stab_rotor,tag=!terf_stab_rotor_vertical] run data merge entity @s {start_interpolation:0,interpolation_duration:400,transformation:{translation:[0.99f,0f,0f],scale:[0.99f,0.99f,0.99f]}}
-$execute as @e[tag=terf_related_$(machine_id),tag=terf_stab_d_rotor] run data merge entity @s {start_interpolation:0,interpolation_duration:400,transformation:{translation:[0f,1.99f,0f],scale:[0.99f,0.99f,0.99f]}}
-$execute as @e[tag=terf_related_$(machine_id),tag=terf_stab_u_rotor] run data merge entity @s {start_interpolation:0,interpolation_duration:400,transformation:{translation:[0f,-0.99f,0f],scale:[0.99f,0.99f,0.99f]}}
-$execute as @e[tag=terf_related_$(machine_id),tag=terf_stab_loss_laser] run data merge entity @s {start_interpolation:0,interpolation_duration:10,transformation:{scale:[8.01f,8.01f,8.01f]}}

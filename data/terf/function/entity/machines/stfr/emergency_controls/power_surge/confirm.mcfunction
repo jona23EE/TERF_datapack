@@ -1,3 +1,0 @@
-function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'stfr.econtrols.surge_confirm',level:2,text:'{"text":"Emergency Power Surge Activation Confirmed! ","color":"white"},{"text":"Power Surge Will Commince In T-30s Unless Aborted!","color":"red"}'}
-execute as @s[tag=terf_speakerconnected] run playsound terf:alarms.beep2 ambient @a[distance=0..] ~ ~ ~ 1 1
-scoreboard players set @s terf_data_U 3

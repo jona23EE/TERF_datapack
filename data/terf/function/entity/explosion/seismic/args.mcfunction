@@ -1,1 +1,0 @@
-$execute as @e[distance=$(prev_distance)..$(distance)] run function terf:entity/explosion/seismic/as_entity

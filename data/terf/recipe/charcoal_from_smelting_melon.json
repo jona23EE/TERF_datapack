@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:smelting",
-    "ingredient": "minecraft:melon",
-    "result": {
-      "id": "minecraft:charcoal"
-    },
-    "cookingtime": 600
-  }
-  

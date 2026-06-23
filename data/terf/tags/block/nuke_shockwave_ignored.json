@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:barrier",
-    "minecraft:glow_lichen",
-    "minecraft:air",
-    "minecraft:cave_air"
-  ]
-}

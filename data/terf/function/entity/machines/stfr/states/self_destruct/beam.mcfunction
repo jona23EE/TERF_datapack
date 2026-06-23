@@ -1,4 +1,0 @@
-particle dragon_breath ~ ~ ~ 0 0 0 0 1 force
-execute if block ~ ~ ~ #terf:air_and_fire positioned ^ ^ ^0.2 rotated ~1.5 ~ run return run function terf:entity/machines/stfr/states/self_destruct/beam
-execute unless block ~ ~ ~ #terf:indestructible unless block ~ ~ ~ waxed_lightning_rod unless block ~ ~ ~ petrified_oak_slab unless block ~ ~ ~ redstone_lamp unless block ~ ~ ~ waxed_oxidized_copper_grate unless block ~ ~ ~ redstone_block unless block ~ ~ ~ waxed_oxidized_cut_copper_stairs unless block ~ ~ ~ waxed_weathered_chiseled_copper unless block ~ ~ ~ glowstone unless block ~ ~ ~ waxed_weathered_copper unless block ~ ~ ~ black_glazed_terracotta run setblock ~ ~ ~ fire
-particle flash{color:[1,1,1,1]}

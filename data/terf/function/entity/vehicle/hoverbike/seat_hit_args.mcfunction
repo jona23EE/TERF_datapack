@@ -1,1 +1,0 @@
-$data modify storage terf:temp temp.components.minecraft:lore set value [{text:"Color HEX: #$(arg2)$(arg3)$(arg4)",italic:false,color:gray},{text:"Color RGB: r:$(r) g:$(g) b:$(b)",italic:false,color:gray},{text:"Color INT: $(colorint)",italic:false,color:gray},{text:"Damage: $(damage)%",italic:false,color:gray},{text:"Charge: $(charge)",italic:false,color:gray}]

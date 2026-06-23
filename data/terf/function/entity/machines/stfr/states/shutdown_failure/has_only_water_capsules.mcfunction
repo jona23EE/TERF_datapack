@@ -1,1 +1,0 @@
-return run function terf:entity/machines/stfr/states/shutdown_failure/has_only_water_capsules_args with entity @s data.terf

@@ -1,1 +1,0 @@
-$execute align xyz positioned ~$(offset_x) ~$(offset_y) ~$(offset_z) positioned ~-.001 ~-.001 ~-.001 positioned ~-.5 ~-.5 ~-.5 as @e[dx=$(size_x_add),dy=$(size_y_add),dz=$(size_z_add)] positioned ~.5 ~.5 ~.5 unless entity @s[dx=$(size_x),dy=$(size_y),dz=$(size_z)] at @s run damage @s 500 terf:warp_field

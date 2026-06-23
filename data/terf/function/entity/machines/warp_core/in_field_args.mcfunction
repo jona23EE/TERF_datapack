@@ -1,1 +1,0 @@
-$execute positioned ~-.5 ~-.5 ~-.5 positioned ~-$(axis_x) ~-$(axis_y) ~-$(axis_z) as @e[dx=$(Daxis_x),dy=$(Daxis_y),dz=$(Daxis_z)] positioned ~.5 ~.5 ~.5 positioned ~$(axis_x) ~$(axis_y) ~$(axis_z) run $(command)

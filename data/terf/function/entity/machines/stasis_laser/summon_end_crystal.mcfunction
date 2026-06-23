@@ -1,1 +1,0 @@
-$summon end_crystal ~ ~-1 ~ {Invulnerable:1b,ShowBottom:0b,beam_target:$(Pos),Tags:["terf_related_$(machine_id)"]}

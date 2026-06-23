@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "minecraft:weathered_copper_door",
-    "result": {
-        "id": "minecraft:oxidized_copper_door"
-    },
-    "experience": 0,
-    "cookingtime": 600
-}

@@ -1,2 +1,0 @@
-$data modify entity 0010ccd2-0010-cd37-0010-cd360010c8e1 transformation set value [$(x)f,0f,0f,0f,0f,0f,0f,0f,$(z)f,0f,0f,0f,0f,0f,0f,1f]
-$rotate 0010ccd2-0010-cd37-0010-cd360010c8e1 facing $(x) 0 $(z)

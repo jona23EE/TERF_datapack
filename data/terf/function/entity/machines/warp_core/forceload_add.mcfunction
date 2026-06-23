@@ -1,1 +1,0 @@
-$execute positioned $(x) 0 $(z) run forceload add ~-$(axis_x) ~-$(axis_z) ~$(axis_x) ~$(axis_z)

@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": "minecraft:copper_door",
-    "result": {
-        "id": "minecraft:exposed_copper_door"
-    },
-    "experience": 0,
-    "cookingtime": 600
-}

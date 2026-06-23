@@ -1,1 +1,0 @@
-$data merge entity @s[tag=terf_warp_core_vfx_ver] {interpolation_duration:20,transformation:{scale:[$(size_z_add)f,$(size_x_add)f,1f]}}
