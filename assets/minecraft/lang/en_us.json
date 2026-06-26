@@ -69,7 +69,7 @@
   "death.attack.terfBreatheAir.player": "%1$s ran out of oxygen whilst fighting %2$s",
   "death.attack.terfDepressurization": "%1$s experienced rapid depressurization",
   "death.attack.terfDepressurization.player": "%1$s was rapidly depressurized whilst fighting %2$s",
-  "death.attack.terfAntimatter": "%1$s reacted with antimatter",
+  "death.attack.terfAntimatter": "%1$s ceased to exist on a molecular level",
   "death.attack.terfAntimatter.player": "%1$s reacted with antimatter whilst fighting %2$s",
   "death.attack.terfEchestStartupFailure": "%1$s was teleported to xen by an ender chest startup failure",
   "death.attack.terfEchestStartupFailure.player": "%1$s was teleported to xen by an ender chest startup failure whilst fighting %2$s"
