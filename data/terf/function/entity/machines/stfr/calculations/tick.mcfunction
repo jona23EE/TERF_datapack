@@ -133,11 +133,11 @@ function terf:entity/machines/stfr/calculations/iterate_injection_list with stor
 #====================| Calculate shield stress
 #calculate mssr
 scoreboard players operation mssr terf_states = core_spin_absolute terf_states
-scoreboard players operation mssr terf_states /= mssr_divider terf_states
+scoreboard players operation mssr terf_states /= stfr_mssr_divider terf_states
 
 #calculate pressure shield stress
 scoreboard players operation pressure_shield_stress terf_states = core_pressure terf_states
-scoreboard players operation pressure_shield_stress terf_states /= pressure_shield_stress_divider terf_states
+scoreboard players operation pressure_shield_stress terf_states /= stfr_pressure_shield_stress_divider terf_states
 scoreboard players operation pressure_shield_stress terf_states -= mssr terf_states
 execute if score pressure_shield_stress terf_states matches ..-1 run scoreboard players set pressure_shield_stress terf_states 0
 
@@ -151,11 +151,11 @@ scoreboard players operation unknown_shield_stress terf_states = shield_collapse
 
 #calculate core spin shield stress and its exponential rise after awhile
 scoreboard players operation spin_stress_exp terf_states = core_spin_absolute terf_states
-scoreboard players operation spin_stress_exp terf_states /= spin_shield_stress_exp_divider terf_states
-scoreboard players operation spin_stress_exp terf_states -= spin_shield_stress_exp_subtractor terf_states
+scoreboard players operation spin_stress_exp terf_states /= stfr_spin_shield_stress_exp_divider terf_states
+scoreboard players operation spin_stress_exp terf_states -= stfr_spin_shield_stress_exp_subtractor terf_states
 
 scoreboard players operation spin_shield_stress terf_states = core_spin_absolute terf_states
-scoreboard players operation spin_shield_stress terf_states /= spin_shield_stress_divider terf_states
+scoreboard players operation spin_shield_stress terf_states /= stfr_spin_shield_stress_divider terf_states
 execute if score spin_stress_exp terf_states matches 0.. run scoreboard players operation spin_shield_stress terf_states += spin_stress_exp terf_states
 
 #add together all factors to get the shield stress
@@ -216,7 +216,7 @@ scoreboard players operation cooling_rate terf_states = @s terf_data_P
 #dont start boiling till 100c
 scoreboard players remove cooling_rate terf_states 10000000
 execute if score cooling_rate terf_states matches ..-1 run scoreboard players set cooling_rate terf_states 0
-scoreboard players operation cooling_rate terf_states /= cooling_rate_divider terf_states
+scoreboard players operation cooling_rate terf_states /= stfr_cooling_rate_divider terf_states
 
 scoreboard players operation cooling_rate_mw terf_states = cooling_rate terf_states
 scoreboard players operation cooling_rate_mw terf_states /= 10 terf_states

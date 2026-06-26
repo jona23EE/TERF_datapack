@@ -18,7 +18,7 @@ execute if entity @s[tag=!terf_case,tag=!terf_case_shield] run function terf:ent
 
 scoreboard players operation venting_rate terf_states = case_amount terf_states
 scoreboard players operation venting_rate terf_states *= @s terf_data_I
-scoreboard players operation venting_rate terf_states /= pressure_vent_divider terf_states
+scoreboard players operation venting_rate terf_states /= stfr_pressure_vent_divider terf_states
 scoreboard players operation case_amount terf_states -= venting_rate terf_states
 
 #shield permeability, remove from core amount and add to case amount

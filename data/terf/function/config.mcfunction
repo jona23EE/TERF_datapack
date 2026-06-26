@@ -5,7 +5,7 @@
 #Non Essential Tick (NET) rate, basically the delay between cable updates, structure checks and some other stuff (in ticks)
 scoreboard players set NETrate terf_states 90
 
-#Disable the ability of stuff to summon TNTs or /setblock, /fill air blocks however high explosion power creepers are still used so disable mob griefing if you want to disable all block damages.
+#Disable the ability of hadron beam to explode
 scoreboard players set disable_block_damage terf_states 0
 
 #Self explainatory
@@ -62,7 +62,7 @@ scoreboard players set solar_panel_generation_divider terf_states 54000
 scoreboard players set mcfr_fuel_usage_divider terf_states 30
 
 #total divider for the cooling rate of the mcfr
-scoreboard players set mcfr_cooling_rate_divider terf_states 12000000
+scoreboard players set mcfr_stfr_cooling_rate_divider terf_states 12000000
 
 #multiplier for how much should the cooling rate cool the mcfr, basically the efficiency.
 scoreboard players set mcfr_cooling_multiplier terf_states 120000
@@ -114,9 +114,6 @@ scoreboard players set warp_core_max_size terf_states 75
 #power required for teleporting one block with the warp core?
 scoreboard players set warp_core_power_required_block terf_states 10000
 
-#should the warp core always load the storage dimension to prevent chunks from getting loaded and unloaded every time you check coordinates or warp? (0=no, 1=yes)
-scoreboard players set warp_core_always_load_storage_dimension terf_states 0
-
 ######################################################################################################################################################################################
 
 # METEORS
@@ -125,20 +122,13 @@ scoreboard players set warp_core_always_load_storage_dimension terf_states 0
 scoreboard players set meteor_penetration terf_states 1
 
 ######################################################################################################################################################################################
-
-# HADRON COLLIDER
-
-#Base lenght of the collider needed for the diamond recipe
-scoreboard players set hcdia terf_states 100
-
-######################################################################################################################################################################################
 # STFR
 
 #How much to divide shield permeability's effectiveness by?
 scoreboard players set stfr_shield_permeability_divider terf_states 5000
 
 #How much to divide shield permeability's effectiveness by?
-scoreboard players set pressure_vent_divider terf_states 20000
+scoreboard players set stfr_pressure_vent_divider terf_states 20000
 
 #How many raycasts should the stfr explosion summon in total?
 scoreboard players set stfr_explosion_raycasts terf_states 1000000
@@ -149,58 +139,24 @@ scoreboard players set stfr_max_explosions_per_tick terf_states 2
 #How big of a square should the S.T.F.R load before exploding? (in chunks, make sure it fits the explosion size)
 scoreboard players set stfr_explosion_load_radius terf_states 32
 
-#Divider value for the STFR reactor's heat transfer rate, lower value = more heat transfer
-scoreboard players set heat_transfer_divider terf_states 35
-
 #Divider value for the STFR reactor's case pressure remove rate, higher value = less case pressure removed when the case is broken
 scoreboard players set stfr_case_pressure_remove_rate_divider terf_states 101
 
 #Divider value for the STFR reactor's pressure shield stress, lower value = more shield stress from increasing core pressure
-scoreboard players set pressure_shield_stress_divider terf_states 60000
+scoreboard players set stfr_pressure_shield_stress_divider terf_states 60000
 
 #Divider value for the STFR reactor's core spin shield stress, lower value = more shield stress from increasing core spin
-scoreboard players set spin_shield_stress_divider terf_states 4000
-
-#Divider value for the STFR reactor's optimal shield stress, lower value = more shield stress from increasing core pressure-temperature ratio
-scoreboard players set unoptimal_pressure_stress_divider terf_states 3000
-
-#Divider value for the STFR reactor's fuel usage from shield stress, lower value = more fuel usage from increasing core pressure-temperature ratio
-scoreboard players set unoptimal_pressure_fuel_divider terf_states 500
+scoreboard players set stfr_spin_shield_stress_divider terf_states 4000
 
 #Divider value for the STFR reactor's magnetic shield stress reduction (MSSR) level, lower value = more effect the core spin has on reducing the core temp and core pressure shield stresses
-scoreboard players set mssr_divider terf_states 2500
-
-#Multiplier value for the STFR reactor's pressure increase when you overfeed the core with fuel, higher value = more pressure from fuels levels above 1000mb
-scoreboard players set stfr_fuel_overfed_pressure_multiplier terf_states 2000
-
-#Divider value for the STFR reactor's fuel usage, lower value = the reactor uses fuel faster
-scoreboard players set stfr_fuel_usage_divider terf_states 900
-
-#Subtract this value from the STFR reactor's fuel usage
-scoreboard players set stfr_fuel_usage_subtractor terf_states 99
+scoreboard players set stfr_mssr_divider terf_states 2500
 
 #Divider value for the STFR reactor's cooling rate per case temp, lower value = more the reactor cools with the same case temp and more power it makes
-scoreboard players set cooling_rate_divider terf_states 420
-
-#Divider value for the LRPT output of the STFR reactor, lower value = more lrpt generated per core temp
-scoreboard players set stfr_rad_generation_divider terf_states 1000
-
-#Multiplier value for the STFR reactor's amount of pressure generated per core temp (with a set limit), lower value = less core pressure generated per core temp
-scoreboard players set core_temp_pmultiplier terf_states 44
-
-#Divider value for the STFR reactor's amount of pressure generated per core temp, lower value = more core pressure generated per core temp
-scoreboard players set core_pressure_generation_divider terf_states 50
-
-#Divider value for the STFR reactor's amount of case pressure removed per tick when the case is broken, lower value = more case pressure removed per tick when case is broken
-scoreboard players set casepressureremoveratedivider terf_states 101
+scoreboard players set stfr_cooling_rate_divider terf_states 420
 
 #Use these to set when the spin shield stress starts increasing exponentially
-scoreboard players set spin_shield_stress_exp_divider terf_states 200
-scoreboard players set spin_shield_stress_exp_subtractor terf_states 800
-
-#Use these to set a good pressure-temperature for the stfr reactor (cant really explain how it works)
-scoreboard players set unoptimal_pressure_adder terf_states 1234
-scoreboard players set unoptimal_pressure_multiplier terf_states 2
+scoreboard players set stfr_spin_shield_stress_exp_divider terf_states 200
+scoreboard players set stfr_spin_shield_stress_exp_subtractor terf_states 800
 
 ######################################################################################################################################################################################
 
