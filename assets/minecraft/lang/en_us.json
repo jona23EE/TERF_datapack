@@ -61,7 +61,7 @@
   "jukebox_song.terf.aviators_sweet_dreams": "Aviators - Sweet Dreams",
   "death.attack.terfVaporisation": "%1$s was instantaneously vaporised",
   "death.attack.terfVaporisation.player": "%1$s was vaporised whilst fighting %2$s",
-  "death.attack.terfCrush": "%1$s was crushed by industrial machinery",
+  "death.attack.terfCrush": "%1$s ignored OSHA guidelines and was crushed by industrial machinery",
   "death.attack.terfCrush.player": "%1$s was crushed by industrial machinery whilst fighting %2$s",
   "death.attack.terfBleeding": "%1$s bled out",
   "death.attack.terfBleeding.player": "%1$s bled out whilst fighting %2$s",
@@ -72,5 +72,5 @@
   "death.attack.terfAntimatter": "%1$s reacted with antimatter",
   "death.attack.terfAntimatter.player": "%1$s reacted with antimatter whilst fighting %2$s",
   "death.attack.terfEchestStartupFailure": "%1$s was teleported to xen by an ender chest startup failure",
-  "death.attack.terfEchestStartupFailure.player": "%1$s was teleported to xen by an ender chest startup failure whilst fighting %2$s",
+  "death.attack.terfEchestStartupFailure.player": "%1$s was teleported to xen by an ender chest startup failure whilst fighting %2$s"
 }
