@@ -3,6 +3,6 @@
     "pack_format": 107,
     "min_format": 82,
     "max_format": 69420,
-    "description": ""
+    "description": [{"text":"T","color":"#FF2020","bold":true},{"text":".","color":"#FF4020","bold":true},{"text":"E","color":"#FF6020","bold":true},{"text":".","color":"#FF8020","bold":true},{"text":"R","color":"#FFA020","bold":true},{"text":".","color":"#FFC020","bold":true},{"text":"F","color":"#FFE020","bold":true},{"text":" // ","color":"#555555","bold":false},{"text":"0 days since last accident.","color":"#AAAAAA","italic":true}]
   }
 }

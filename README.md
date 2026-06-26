@@ -14,8 +14,10 @@ multiple reactors from exploding, and monopolizing off their power.
 ## Information
 - 📖 [Wiki (Miraheze)](https://trotywiki.miraheze.org)
 - 🌍 [Planet Minecraft](https://www.planetminecraft.com/data-pack/troty-energy-research-facility-infinity-update/)
+- 📦 [Modrinth (Datapack)](https://modrinth.com/datapack/troty-energy-research-facility)
+- 🎨 [Modrinth (Resource Pack)](https://modrinth.com/resourcepack/troty-energy-research-facility-resource-pack)
 - 💬 [Discord](https://discord.gg/cXExM7pN3g)
-- 🖥️ Server: `TERF.ossmp.org` (Java 1.21.11)
+- 🖥️ Server: `TERF.ossmp.org` (Java 26.1.2)
 
 ---
 
