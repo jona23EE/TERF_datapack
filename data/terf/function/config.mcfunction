@@ -62,7 +62,7 @@ scoreboard players set solar_panel_generation_divider terf_states 54000
 scoreboard players set mcfr_fuel_usage_divider terf_states 30
 
 #total divider for the cooling rate of the mcfr
-scoreboard players set mcfr_stfr_cooling_rate_divider terf_states 12000000
+scoreboard players set mcfr_cooling_rate_divider terf_states 12000000
 
 #multiplier for how much should the cooling rate cool the mcfr, basically the efficiency.
 scoreboard players set mcfr_cooling_multiplier terf_states 120000
