@@ -7,6 +7,8 @@ execute as @s[tag=terf_chunk_loader] run forceload remove ~-48 ~-48 ~48 ~48
 
 function terf:entity/machines/multiblock_core_drop_capsules with entity @s data.terf
 
+execute if data entity @s data.terf.destroy run function terf:entity/machines/multiblock_core_run_cleanup with entity @s data.terf
+
 data modify storage terf:temp args.array set from entity @s data.fluids
 function terf:entity/explosion/antimatter/attempt_explosion
 
