@@ -72,5 +72,5 @@
   "death.attack.terfAntimatter": "%1$s reacted with antimatter",
   "death.attack.terfAntimatter.player": "%1$s reacted with antimatter whilst fighting %2$s",
   "death.attack.terfEchestStartupFailure": "%1$s was teleported to xen by an ender chest startup failure",
-  "death.attack.terfEchestStartupFailure.player": "%1$s was teleported to xen by an ender chest startup failure whilst fighting %2$s",
+  "death.attack.terfEchestStartupFailure.player": "%1$s was teleported to xen by an ender chest startup failure whilst fighting %2$s"
 }
