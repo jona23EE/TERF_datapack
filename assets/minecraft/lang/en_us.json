@@ -23,7 +23,7 @@
   "block.minecraft.light_blue_glazed_terracotta": "Active Fuel Rod Assembly",
   "block.minecraft.purple_glazed_terracotta": "Crane Control Rod Attachment",
   "block.minecraft.resin_block": "Phenolic Insulation",
-  "block.minecraft.waxed_oxidized_copper_chain": "Data Cable",  
+  "block.minecraft.waxed_oxidized_copper_chain": "Data Cable",
   "soundCategory.ui": "UI/Custom Music",
   "death.attack.terfLaser": "%1$s was lased",
   "death.attack.terfLaser.item": "%1$s was lased by %2$s using %3$s",
@@ -72,5 +72,5 @@
   "death.attack.terfAntimatter": "%1$s reacted with antimatter",
   "death.attack.terfAntimatter.player": "%1$s reacted with antimatter whilst fighting %2$s",
   "death.attack.terfEchestStartupFailure": "%1$s was teleported to xen by an ender chest startup failure",
-  "death.attack.terfEchestStartupFailure.player": "%1$s was teleported to xen by an ender chest startup failure whilst fighting %2$s",
+  "death.attack.terfEchestStartupFailure.player": "%1$s was teleported to xen by an ender chest startup failure whilst fighting %2$s"
 }
